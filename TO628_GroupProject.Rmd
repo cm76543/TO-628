@@ -233,25 +233,86 @@ We can see that the output appears to give good results with accuracies around 6
 
 
 ### Prediction Using KNN Model - JAKE TO COMPLETE
+```{r, echo=TRUE, eval=TRUE}
+#create normalized training and test sets
+normalize <- function(x) 
+{ 
+  if (min(x)==max(x))
+  {
+    return(0)
+  }
+  else
+  {
+    return((x - min(x)) / (max(x) - min(x)))
+  }
+}
+
+# apply normalization to training and test sets
+tennis3_train_n <- as.data.frame(lapply(tennis3_train[-83], normalize))
+tennis3_train_n$player_won_ind <- tennis3_train$player_won_ind
+tennis3_test_n <- as.data.frame(lapply(tennis3_test[-83], normalize))
+tennis3_test_n$player_won_ind <- tennis3_test$player_won_ind
+```
+
 
 
 ### Prediction Using Neural Net (ANN) Model - CHARLIE TO COMPLETE
-```{r}
+```{r, echo=TRUE, eval=FALSE}
 # Neural Net
 library(neuralnet)
 
-# ANN with 1 hidden layer and 
-ann_model <- neuralnet(formula = player_won_ind ~ .,
-                              data = tennis3_train, hidden=3)
+# try ANN models with varying numbers of nodes and 1 layer
+acc <- 0
+best_nodes <- 0
 
+for (i in 1:20)
+{
+  print(i)
+  ann_model <- neuralnet(formula = player_won_ind ~ .,
+                              data = tennis3_train_n, hidden=i)  
+  ann_predictions <- neuralnet::compute(ann_model, tennis3_test_n[1:82])
+  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
+  ann_model_confmatrix <- confusionMatrix(ann_predictions, tennis3_test_n$player_won_ind)
+  print(ann_model_confmatrix$overall['Accuracy'])
+}
+
+
+# try ANN models with varying numbers of nodes and 2 layers
+layer1_nodes <- 0
+layer2_nodes <- 0
+for (i in 1:2)
+{
+  for (j in 1:i)
+  {
+   ann_model <- neuralnet(formula = player_won_ind ~ .,
+                              data = tennis3_train, hidden=c(i,j))  
+  ann_predictions <- neuralnet::compute(ann_model, tennis3_test[1:82])
+  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
+  ann_model_confmatrix <- confusionMatrix(ann_predictions, tennis3_test$player_won_ind)
+  if (ann_model_confmatrix$overall['Accuracy'] > acc)
+  {
+    acc <- ann_model_confmatrix$overall['Accuracy']
+    layer1_nodes <- i
+    layer2_nodes <- j
+  }
+  }
+}
+
+acc
+layer1_nodes
+layer2_nodes
+
+#choose the number of nodes with the highest accuracy
+ann_model <- neuralnet(formula = player_won_ind ~ .,
+                              data = tennis3_train, hidden=c(3,))
 
 # visualize the network topology
 plot(ann_model)
 
 #Evaluate model performance
-ann_predictions <- compute(ann_model, pokemon_test_n[1:71])
+ann_predictions <- neuralnet::compute(ann_model, tennis3_test[1:82])
 ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-ann_model_confmatrix <- confusionMatrix(ann_predictions, pokemon_test_n$is_legendary)
+ann_model_confmatrix <- confusionMatrix(ann_predictions, tennis3_test$player_won_ind)
 ann_model_confmatrix
 ```
 
