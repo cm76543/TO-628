@@ -1,0 +1,675 @@
+tourney_id,match_num,tourney_date,tourney_name,surface,year,player_name,opp_name,player_LN,Opp_LN,player_odds,opp_odds
+2016-0308,271,20160425,Munich,Clay,2016,Marco Cecchinato,Igor Sijsling,Cecchinato,Sijsling,147,-179
+2016-0308,272,20160425,Munich,Clay,2016,Mikhail Kukushkin,Evgeny Donskoy,Kukushkin,Donskoy,-122,-104
+2016-0308,279,20160425,Munich,Clay,2016,Ivan Dodig,Ernests Gulbis,Dodig,Gulbis,-130,104
+2016-0308,280,20160425,Munich,Clay,2016,Mischa Zverev,Santiago Giraldo,Zverev,Giraldo,-159,125
+2016-0308,286,20160425,Munich,Clay,2016,Igor Sijsling,Jozef Kovalik,Sijsling,Kovalik,-104,-123
+2016-0308,286,20160425,Munich,Clay,2016,Igor Sijsling,Jozef Kovalik,Sijsling,Kovalik,166,-222
+2016-0308,288,20160425,Munich,Clay,2016,Florian Mayer,Philipp Kohlschreiber,Mayer,Kohlschreiber,505,-769
+2016-0308,290,20160425,Munich,Clay,2016,Ivan Dodig,Thomaz Bellucci,Dodig,Bellucci,144,-189
+2016-0308,292,20160425,Munich,Clay,2016,Lukas Rosol,Alexander Zverev,Rosol,Zverev,177,-227
+2016-0308,294,20160425,Munich,Clay,2016,Fabio Fognini,Jozef Kovalik,Fognini,Kovalik,-714,470
+2016-0308,296,20160425,Munich,Clay,2016,Dominic Thiem,Ivan Dodig,Thiem,Dodig,-667,451
+2016-0308,298,20160425,Munich,Clay,2016,Philipp Kohlschreiber,Fabio Fognini,Kohlschreiber,Fognini,-270,211
+2016-0308,299,20160425,Munich,Clay,2016,Alexander Zverev,Dominic Thiem,Zverev,Thiem,179,-233
+2016-0319,277,20160718,Kitzbuhel,Clay,2016,Lukas Rosol,Nikoloz Basilashvili,Rosol,Basilashvili,-185,147
+2016-0319,283,20160718,Kitzbuhel,Clay,2016,Albert Montanes,Gerald Melzer,Montanes,Melzer,-149,119
+2016-0319,284,20160718,Kitzbuhel,Clay,2016,Jurgen Melzer,Taro Daniel,Melzer,Daniel,165,-213
+2016-0319,287,20160718,Kitzbuhel,Clay,2016,Dusan Lajovic,Mischa Zverev,Lajovic,Zverev,-179,143
+2016-0319,288,20160718,Kitzbuhel,Clay,2016,Adam Pavlasek,Marcel Granollers,Pavlasek,Granollers,156,-196
+2016-0319,293,20160718,Kitzbuhel,Clay,2016,Dominic Thiem,Jurgen Melzer,Thiem,Melzer,-1250,718
+2016-0319,294,20160718,Kitzbuhel,Clay,2016,Dusan Lajovic,Karen Khachanov,Lajovic,Khachanov,-132,102
+2016-0319,295,20160718,Kitzbuhel,Clay,2016,Nikoloz Basilashvili,Adam Pavlasek,Basilashvili,Pavlasek,121,-154
+2016-0319,297,20160718,Kitzbuhel,Clay,2016,Jurgen Melzer,Gerald Melzer,Melzer,Melzer,-137,110
+2016-0319,298,20160718,Kitzbuhel,Clay,2016,Nikoloz Basilashvili,Dusan Lajovic,Basilashvili,Lajovic,175,-233
+2016-0319,299,20160718,Kitzbuhel,Clay,2016,Gerald Melzer,Paolo Lorenzi,Melzer,Lorenzi,-120,-104
+2016-0319,300,20160718,Kitzbuhel,Clay,2016,Paolo Lorenzi,Nikoloz Basilashvili,Lorenzi,Basilashvili,-122,100
+2016-0321,271,20160606,Stuttgart,Grass,2016,Denis Istomin,Radek Stepanek,Istomin,Stepanek,175,-227
+2016-0321,277,20160606,Stuttgart,Grass,2016,Lucas Pouille,John Millman,Pouille,Millman,121,-154
+2016-0321,278,20160606,Stuttgart,Grass,2016,Mikhail Youzhny,Feliciano Lopez,Youzhny,Lopez,200,-263
+2016-0321,282,20160606,Stuttgart,Grass,2016,Florian Mayer,Viktor Troicki,Mayer,Troicki,169,-227
+2016-0321,290,20160606,Stuttgart,Grass,2016,Sergiy Stakhovsky,Mikhail Youzhny,Stakhovsky,Youzhny,125,-156
+2016-0321,292,20160606,Stuttgart,Grass,2016,Michael Berrer,Florian Mayer,Berrer,Mayer,184,-238
+2016-0321,299,20160606,Stuttgart,Grass,2016,Roger Federer,Dominic Thiem,Federer,Thiem,-333,254
+2016-0321,300,20160606,Stuttgart,Grass,2016,Dominic Thiem,Philipp Kohlschreiber,Thiem,Kohlschreiber,156,-185
+2016-0329,270,20161003,Tokyo,Hard,2016,Yuichi Sugita,Gael Monfils,Sugita,Monfils,627,-1000
+2016-0329,272,20161003,Tokyo,Hard,2016,Janko Tipsarevic,Taro Daniel,Tipsarevic,Daniel,-118,-105
+2016-0329,273,20161003,Tokyo,Hard,2016,Ivo Karlovic,Federico Delbonis,Karlovic,Delbonis,-312,241
+2016-0329,275,20161003,Tokyo,Hard,2016,Marcel Granollers,Marcos Baghdatis,Granollers,Baghdatis,173,-227
+2016-0329,276,20161003,Tokyo,Hard,2016,Stephane Robert,Radek Stepanek,Robert,Stepanek,177,-227
+2016-0329,280,20161003,Tokyo,Hard,2016,Go Soeda,Fernando Verdasco,Soeda,Verdasco,225,-286
+2016-0329,281,20161003,Tokyo,Hard,2016,Marin Cilic,Benoit Paire,Cilic,Paire,-476,338
+2016-0329,284,20161003,Tokyo,Hard,2016,Martin Klizan,Joao Sousa,Klizan,Sousa,147,-185
+2016-0329,287,20161003,Tokyo,Hard,2016,Ivo Karlovic,Janko Tipsarevic,Karlovic,Tipsarevic,-167,131
+2016-0329,290,20161003,Tokyo,Hard,2016,Juan Monaco,James Duckworth,Monaco,Duckworth,-172,131
+2016-0329,291,20161003,Tokyo,Hard,2016,Marin Cilic,Fernando Verdasco,Cilic,Verdasco,-417,303
+2016-0329,292,20161003,Tokyo,Hard,2016,Jiri Vesely,David Goffin,Vesely,Goffin,197,-256
+2016-0329,293,20161003,Tokyo,Hard,2016,Kei Nishikori,Joao Sousa,Nishikori,Sousa,-1429,748
+2016-0329,295,20161003,Tokyo,Hard,2016,Nick Kyrgios,Gilles Muller,Kyrgios,Muller,-204,159
+2016-0329,296,20161003,Tokyo,Hard,2016,Marin Cilic,Juan Monaco,Cilic,Monaco,-500,373
+2016-0329,299,20161003,Tokyo,Hard,2016,David Goffin,Marin Cilic,Goffin,Cilic,152,-196
+2016-0337,272,20161024,Vienna,Hard,2016,Nicolas Almagro,Damir Dzumhur,Almagro,Dzumhur,-137,110
+2016-0337,275,20161024,Vienna,Hard,2016,Fabio Fognini,Albert Ramos,Fognini,Ramos,-238,189
+2016-0337,278,20161024,Vienna,Hard,2016,Kyle Edmund,David Ferrer,Edmund,Ferrer,131,-167
+2016-0337,279,20161024,Vienna,Hard,2016,Joao Sousa,Pablo Cuevas,Sousa,Cuevas,-125,100
+2016-0337,280,20161024,Vienna,Hard,2016,Kevin Anderson,Viktor Troicki,Anderson,Troicki,-133,106
+2016-0337,281,20161024,Vienna,Hard,2016,Dominic Thiem,Gerald Melzer,Thiem,Melzer,-909,563
+2016-0337,287,20161024,Vienna,Hard,2016,Ivo Karlovic,Damir Dzumhur,Karlovic,Dzumhur,-323,242
+2016-0337,288,20161024,Vienna,Hard,2016,Albert Ramos,Jurgen Melzer,Ramos,Melzer,108,-137
+2016-0337,290,20161024,Vienna,Hard,2016,Joao Sousa,David Ferrer,Sousa,Ferrer,216,-278
+2016-0337,292,20161024,Vienna,Hard,2016,John Isner,Feliciano Lopez,Isner,Lopez,-139,108
+2016-0337,297,20161024,Vienna,Hard,2016,Andy Murray,John Isner,Murray,Isner,-833,544
+2016-0341,273,20160919,Metz,Hard,2016,Nicolas Mahut,Quentin Halys,Mahut,Halys,-476,351
+2016-0341,277,20160919,Metz,Hard,2016,Martin Klizan,Julien Benneteau,Klizan,Benneteau,112,-147
+2016-0341,279,20160919,Metz,Hard,2016,Malek Jaziri,Ivan Dodig,Jaziri,Dodig,102,-125
+2016-0341,284,20160919,Metz,Hard,2016,Peter Gojowczyk,Nicolas Almagro,Gojowczyk,Almagro,149,-189
+2016-0341,287,20160919,Metz,Hard,2016,Nicolas Mahut,Illya Marchenko,Mahut,Marchenko,-217,169
+2016-0341,290,20160919,Metz,Hard,2016,Malek Jaziri,Vincent Millot,Jaziri,Millot,-135,108
+2016-0341,292,20160919,Metz,Hard,2016,Nikoloz Basilashvili,Gilles Muller,Basilashvili,Muller,283,-370
+2016-0341,293,20160919,Metz,Hard,2016,Dominic Thiem,Peter Gojowczyk,Thiem,Gojowczyk,-400,298
+2016-0341,295,20160919,Metz,Hard,2016,Julien Benneteau,Lucas Pouille,Benneteau,Pouille,144,-185
+2016-0352,239,20161031,Paris Masters,Hard,2016,Robin Haase,Fernando Verdasco,Haase,Verdasco,-137,110
+2016-0352,243,20161031,Paris Masters,Hard,2016,Gilles Simon,Julien Benneteau,Simon,Benneteau,-256,200
+2016-0352,244,20161031,Paris Masters,Hard,2016,Andreas Seppi,Joao Sousa,Seppi,Sousa,-154,123
+2016-0352,251,20161031,Paris Masters,Hard,2016,Albert Ramos,Stephane Robert,Ramos,Robert,-152,123
+2016-0352,252,20161031,Paris Masters,Hard,2016,Viktor Troicki,Adrian Mannarino,Troicki,Mannarino,-196,156
+2016-0352,256,20161031,Paris Masters,Hard,2016,Steve Johnson,Guido Pella,Johnson,Pella,-303,233
+2016-0352,263,20161031,Paris Masters,Hard,2016,Nicolas Mahut,Martin Klizan,Mahut,Klizan,-147,118
+2016-0352,264,20161031,Paris Masters,Hard,2016,Dusan Lajovic,Ivo Karlovic,Lajovic,Karlovic,199,-256
+2016-0352,273,20161031,Paris Masters,Hard,2016,Tomas Berdych,Joao Sousa,Berdych,Sousa,-345,268
+2016-0352,282,20161031,Paris Masters,Hard,2016,Nicolas Mahut,David Goffin,Mahut,Goffin,249,-323
+2016-0352,283,20161031,Paris Masters,Hard,2016,Marin Cilic,Ivo Karlovic,Cilic,Karlovic,-294,225
+2016-0352,287,20161031,Paris Masters,Hard,2016,Tomas Berdych,Gilles Simon,Berdych,Simon,-109,-112
+2016-0352,288,20161031,Paris Masters,Hard,2016,Pablo Cuevas,Milos Raonic,Cuevas,Raonic,526,-769
+2016-0352,293,20161031,Paris Masters,Hard,2016,Novak Djokovic,Grigor Dimitrov,Djokovic,Dimitrov,-833,572
+2016-0352,294,20161031,Paris Masters,Hard,2016,Tomas Berdych,Andy Murray,Berdych,Murray,610,-909
+2016-0352,296,20161031,Paris Masters,Hard,2016,John Isner,Jack Sock,Isner,Sock,124,-152
+2016-0352,297,20161031,Paris Masters,Hard,2016,Novak Djokovic,Marin Cilic,Djokovic,Cilic,-476,355
+2016-0352,300,20161031,Paris Masters,Hard,2016,John Isner,Andy Murray,Isner,Murray,449,-625
+2016-0375,271,20160201,Montpellier,Hard,2016,Luca Vanni,Alexander Zverev,Vanni,Zverev,186,-250
+2016-0375,276,20160201,Montpellier,Hard,2016,Julien Benneteau,John Millman,Benneteau,Millman,131,-167
+2016-0375,278,20160201,Montpellier,Hard,2016,Ruben Bemelmans,Joao Sousa,Bemelmans,Sousa,329,-476
+2016-0375,280,20160201,Montpellier,Hard,2016,Steve Darcis,Dustin Brown,Darcis,Brown,114,-143
+2016-0375,283,20160201,Montpellier,Hard,2016,Denis Istomin,Taro Daniel,Istomin,Daniel,-213,163
+2016-0375,284,20160201,Montpellier,Hard,2016,Ernests Gulbis,Quentin Halys,Gulbis,Halys,-196,154
+2016-0375,286,20160201,Montpellier,Hard,2016,Alexander Zverev,Marin Cilic,Zverev,Cilic,337,-476
+2016-0375,294,20160201,Montpellier,Hard,2016,Michael Berrer,Alexander Zverev,Berrer,Zverev,159,-200
+2016-0375,297,20160201,Montpellier,Hard,2016,Richard Gasquet,Marcos Baghdatis,Gasquet,Baghdatis,-238,185
+2016-0414,273,20160711,Hamburg,Clay,2016,Martin Klizan,Igor Sijsling,Klizan,Sijsling,-357,272
+2016-0414,280,20160711,Hamburg,Clay,2016,Thiago Monteiro,Mischa Zverev,Monteiro,Zverev,-109,-114
+2016-0414,281,20160711,Hamburg,Clay,2016,Pablo Cuevas,Florian Mayer,Cuevas,Mayer,-323,245
+2016-0414,284,20160711,Hamburg,Clay,2016,Nicolas Kicker,Thomas Fabbiano,Kicker,Fabbiano,-172,136
+2016-0414,287,20160711,Hamburg,Clay,2016,Martin Klizan,Louis Wessels,Klizan,Wessels,-1667,894
+2016-0414,297,20160711,Hamburg,Clay,2016,Philipp Kohlschreiber,Renzo Olivo,Kohlschreiber,Olivo,-1111,664
+2016-0414,298,20160711,Hamburg,Clay,2016,Stephane Robert,Martin Klizan,Robert,Klizan,174,-217
+2016-0439,276,20160718,Umag,Clay,2016,Filip Krajinovic,Carlos Berlocq,Krajinovic,Berlocq,220,-286
+2016-0439,277,20160718,Umag,Clay,2016,Jiri Vesely,Michael Linzer,Vesely,Linzer,-667,443
+2016-0439,287,20160718,Umag,Clay,2016,Martin Klizan,Andrej Martin,Klizan,Martin,-500,363
+2016-0439,288,20160718,Umag,Clay,2016,Nikola Cacic,Jeremy Chardy,Cacic,Chardy,695,-1250
+2016-0439,289,20160718,Umag,Clay,2016,Jiri Vesely,Carlos Berlocq,Vesely,Berlocq,-156,125
+2016-0439,291,20160718,Umag,Clay,2016,Fabio Fognini,Renzo Olivo,Fognini,Olivo,-345,241
+2016-0439,294,20160718,Umag,Clay,2016,Andrej Martin,Joao Sousa,Martin,Sousa,227,-303
+2016-0439,298,20160718,Umag,Clay,2016,Carlos Berlocq,Andrej Martin,Berlocq,Martin,-303,234
+2016-0439,299,20160718,Umag,Clay,2016,Gastao Elias,Fabio Fognini,Elias,Fognini,184,-238
+2016-0439,300,20160718,Umag,Clay,2016,Fabio Fognini,Andrej Martin,Fognini,Martin,-476,345
+2016-0496,271,20160215,Marseille,Hard,2016,Julien Benneteau,Alexander Zverev,Benneteau,Zverev,131,-169
+2016-0496,272,20160215,Marseille,Hard,2016,Mischa Zverev,Ramkumar Ramanathan,Zverev,Ramanathan,-833,532
+2016-0496,273,20160215,Marseille,Hard,2016,David Goffin,Hyeon Chung,Goffin,Chung,-417,296
+2016-0496,280,20160215,Marseille,Hard,2016,Robin Haase,Joao Sousa,Haase,Sousa,190,-244
+2016-0496,284,20160215,Marseille,Hard,2016,Feliciano Lopez,Sergiy Stakhovsky,Lopez,Stakhovsky,-357,264
+2016-0496,288,20160215,Marseille,Hard,2016,Ernests Gulbis,Richard Gasquet,Gulbis,Gasquet,269,-357
+2016-0496,291,20160215,Marseille,Hard,2016,Marin Cilic,Robin Haase,Cilic,Haase,-556,376
+2016-0496,292,20160215,Marseille,Hard,2016,Vincent Millot,Benoit Paire,Millot,Paire,257,-345
+2016-0496,293,20160215,Marseille,Hard,2016,Stanislas Wawrinka,Sergiy Stakhovsky,Wawrinka,Stakhovsky,-526,361
+2016-0496,295,20160215,Marseille,Hard,2016,Nick Kyrgios,Richard Gasquet,Kyrgios,Gasquet,139,-175
+2016-0496,299,20160215,Marseille,Hard,2016,Benoit Paire,Marin Cilic,Paire,Cilic,202,-256
+2016-0496,300,20160215,Marseille,Hard,2016,Marin Cilic,Nick Kyrgios,Cilic,Kyrgios,137,-172
+2016-0500,270,20160613,Halle,Grass,2016,Lucas Pouille,Kei Nishikori,Pouille,Nishikori,821,-1429
+2016-0500,273,20160613,Halle,Grass,2016,David Ferrer,Andreas Seppi,Ferrer,Seppi,-303,231
+2016-0500,274,20160613,Halle,Grass,2016,Joao Sousa,Dominic Thiem,Sousa,Thiem,338,-476
+2016-0500,280,20160613,Halle,Grass,2016,Dustin Brown,Albert Ramos,Brown,Ramos,-400,284
+2016-0500,283,20160613,Halle,Grass,2016,Denis Kudla,Sergiy Stakhovsky,Kudla,Stakhovsky,100,-123
+2016-0500,287,20160613,Halle,Grass,2016,Andreas Seppi,Yuichi Sugita,Seppi,Sugita,-417,300
+2016-0500,288,20160613,Halle,Grass,2016,Teymuraz Gabashvili,Dominic Thiem,Gabashvili,Thiem,457,-714
+2016-0500,290,20160613,Halle,Grass,2016,Benjamin Becker,Alexander Zverev,Becker,Zverev,185,-244
+2016-0500,291,20160613,Halle,Grass,2016,Marcos Baghdatis,Dustin Brown,Baghdatis,Brown,-200,154
+2016-0500,292,20160613,Halle,Grass,2016,Sergiy Stakhovsky,David Goffin,Stakhovsky,Goffin,250,-333
+2016-0500,296,20160613,Halle,Grass,2016,Marcos Baghdatis,Alexander Zverev,Baghdatis,Zverev,-119,-108
+2016-0500,297,20160613,Halle,Grass,2016,Roger Federer,David Goffin,Federer,Goffin,-667,454
+2016-0500,299,20160613,Halle,Grass,2016,Roger Federer,Alexander Zverev,Federer,Zverev,-476,345
+2016-0500,300,20160613,Halle,Grass,2016,Alexander Zverev,Florian Mayer,Zverev,Mayer,-213,174
+2016-0506,275,20160208,Buenos Aires,Clay,2016,Leonardo Mayer,Guido Pella,Mayer,Pella,-208,166
+2016-0506,280,20160208,Buenos Aires,Clay,2016,Dusan Lajovic,Facundo Arguello,Lajovic,Arguello,-233,177
+2016-0506,284,20160208,Buenos Aires,Clay,2016,Marco Cecchinato,Juan Monaco,Cecchinato,Monaco,147,-185
+2016-0506,287,20160208,Buenos Aires,Clay,2016,Pablo Cuevas,Santiago Giraldo,Cuevas,Giraldo,-333,254
+2016-0506,289,20160208,Buenos Aires,Clay,2016,Federico Delbonis,Nicolas Almagro,Delbonis,Almagro,112,-141
+2016-0506,293,20160208,Buenos Aires,Clay,2016,Rafael Nadal,Juan Monaco,Nadal,Monaco,-1429,769
+2016-0506,294,20160208,Buenos Aires,Clay,2016,Pablo Cuevas,David Ferrer,Cuevas,Ferrer,530,-714
+2016-0506,296,20160208,Buenos Aires,Clay,2016,Dusan Lajovic,Dominic Thiem,Lajovic,Thiem,234,-303
+2016-0506,299,20160208,Buenos Aires,Clay,2016,Rafael Nadal,Dominic Thiem,Nadal,Thiem,-500,351
+2016-0506,300,20160208,Buenos Aires,Clay,2016,Dominic Thiem,Nicolas Almagro,Thiem,Almagro,-179,141
+2016-0533,277,20160222,Sao Paulo,Clay,2016,Paolo Lorenzi,Blaz Rola,Lorenzi,Rola,-294,225
+2016-0533,283,20160222,Sao Paulo,Clay,2016,Santiago Giraldo,Marco Cecchinato,Giraldo,Cecchinato,-217,165
+2016-0533,284,20160222,Sao Paulo,Clay,2016,Dusan Lajovic,Luca Vanni,Lajovic,Vanni,-132,102
+2016-0533,292,20160222,Sao Paulo,Clay,2016,Santiago Giraldo,Gastao Elias,Giraldo,Elias,-192,150
+2016-0533,297,20160222,Sao Paulo,Clay,2016,Dusan Lajovic,Gastao Elias,Lajovic,Elias,-175,139
+2016-0891,275,20160104,Chennai,Hard,2016,John Millman,Evgeny Donskoy,Millman,Donskoy,-179,142
+2016-0891,280,20160104,Chennai,Hard,2016,Santiago Giraldo,Lukas Rosol,Giraldo,Rosol,181,-233
+2016-0891,287,20160104,Chennai,Hard,2016,Aljaz Bedene,Luca Vanni,Bedene,Vanni,-270,204
+2016-0891,289,20160104,Chennai,Hard,2016,Borna Coric,Austin Krajicek,Coric,Krajicek,-333,258
+2016-0891,296,20160104,Chennai,Hard,2016,Benoit Paire,Thomas Fabbiano,Paire,Fabbiano,-476,347
+2016-0891,300,20160104,Chennai,Hard,2016,Stanislas Wawrinka,Borna Coric,Wawrinka,Coric,-833,522
+2016-580,100,20160118,Australian Open,Hard,2016,Novak Djokovic,Hyeon Chung,Djokovic,Chung,-10000,3033
+2016-580,107,20160118,Australian Open,Hard,2016,Vasek Pospisil,Gilles Simon,Pospisil,Simon,165,-204
+2016-580,111,20160118,Australian Open,Hard,2016,Noah Rubin,Benoit Paire,Rubin,Paire,791,-1429
+2016-580,120,20160118,Australian Open,Hard,2016,Dominic Thiem,Leonardo Mayer,Thiem,Mayer,-172,140
+2016-580,125,20160118,Australian Open,Hard,2016,Albert Ramos,Borna Coric,Ramos,Coric,263,-345
+2016-580,126,20160118,Australian Open,Hard,2016,Dusan Lajovic,Sam Querrey,Lajovic,Querrey,242,-312
+2016-580,130,20160118,Australian Open,Hard,2016,Robin Haase,Mirza Basic,Haase,Basic,-256,200
+2016-580,133,20160118,Australian Open,Hard,2016,Benjamin Becker,Dudi Sela,Becker,Sela,-106,-116
+2016-580,136,20160118,Australian Open,Hard,2016,Gael Monfils,Yuichi Sugita,Monfils,Sugita,-1000,652
+2016-580,137,20160118,Australian Open,Hard,2016,Marco Cecchinato,Nicolas Mahut,Cecchinato,Mahut,661,-1111
+2016-580,138,20160118,Australian Open,Hard,2016,Stephane Robert,Bjorn Fratangelo,Robert,Fratangelo,-192,152
+2016-580,139,20160118,Australian Open,Hard,2016,Rajeev Ram,Kevin Anderson,Ram,Anderson,844,-1667
+2016-580,141,20160118,Australian Open,Hard,2016,Malek Jaziri,Tommy Robredo,Jaziri,Robredo,254,-345
+2016-580,146,20160118,Australian Open,Hard,2016,Tatsuma Ito,Radek Stepanek,Ito,Stepanek,242,-323
+2016-580,147,20160118,Australian Open,Hard,2016,Dmitry Tursunov,Stanislas Wawrinka,Tursunov,Wawrinka,2506,-10000
+2016-580,148,20160118,Australian Open,Hard,2016,David Ferrer,Peter Gojowczyk,Ferrer,Gojowczyk,-2500,1088
+2016-580,153,20160118,Australian Open,Hard,2016,Steve Darcis,Guido Pella,Darcis,Pella,142,-175
+2016-580,155,20160118,Australian Open,Hard,2016,Jerzy Janowicz,John Isner,Janowicz,Isner,316,-435
+2016-580,156,20160118,Australian Open,Hard,2016,Bernard Tomic,Denis Istomin,Tomic,Istomin,-455,330
+2016-580,162,20160118,Australian Open,Hard,2016,Adrian Mannarino,Samuel Groth,Mannarino,Groth,-196,154
+2016-580,164,20160118,Australian Open,Hard,2016,Novak Djokovic,Quentin Halys,Djokovic,Halys,-10000,3356
+2016-580,166,20160118,Australian Open,Hard,2016,Federico Delbonis,Renzo Olivo,Delbonis,Olivo,-286,219
+2016-580,167,20160118,Australian Open,Hard,2016,Evgeny Donskoy,Gilles Simon,Donskoy,Simon,535,-833
+2016-580,176,20160118,Australian Open,Hard,2016,Marin Cilic,Albert Ramos,Cilic,Ramos,-769,531
+2016-580,180,20160118,Australian Open,Hard,2016,Fernando Verdasco,Dudi Sela,Verdasco,Sela,-435,307
+2016-580,181,20160118,Australian Open,Hard,2016,Andrey Kuznetsov,Jeremy Chardy,Kuznetsov,Chardy,112,-145
+2016-580,183,20160118,Australian Open,Hard,2016,Stephane Robert,Rajeev Ram,Robert,Ram,-175,137
+2016-580,186,20160118,Australian Open,Hard,2016,Jack Sock,Lukas Rosol,Sock,Rosol,-217,169
+2016-580,187,20160118,Australian Open,Hard,2016,Radek Stepanek,Stanislas Wawrinka,Stepanek,Wawrinka,765,-1429
+2016-580,188,20160118,Australian Open,Hard,2016,David Ferrer,Lleyton Hewitt,Ferrer,Hewitt,-769,492
+2016-580,189,20160118,Australian Open,Hard,2016,Thomaz Bellucci,Steve Johnson,Bellucci,Johnson,144,-179
+2016-580,190,20160118,Australian Open,Hard,2016,Feliciano Lopez,Guido Pella,Lopez,Pella,-833,522
+2016-580,192,20160118,Australian Open,Hard,2016,Bernard Tomic,Simone Bolelli,Tomic,Bolelli,-556,398
+2016-580,193,20160118,Australian Open,Hard,2016,John Millman,Gilles Muller,Millman,Muller,282,-370
+2016-580,194,20160118,Australian Open,Hard,2016,Joao Sousa,Santiago Giraldo,Sousa,Giraldo,-238,192
+2016-580,195,20160118,Australian Open,Hard,2016,Samuel Groth,Andy Murray,Groth,Murray,1773,-5000
+2016-580,197,20160118,Australian Open,Hard,2016,Federico Delbonis,Gilles Simon,Delbonis,Simon,448,-625
+2016-580,200,20160118,Australian Open,Hard,2016,Roger Federer,Grigor Dimitrov,Federer,Dimitrov,-1111,688
+2016-580,201,20160118,Australian Open,Hard,2016,Dominic Thiem,David Goffin,Thiem,Goffin,-179,147
+2016-580,208,20160118,Australian Open,Hard,2016,David Ferrer,Steve Johnson,Ferrer,Johnson,-476,353
+2016-580,211,20160118,Australian Open,Hard,2016,Joao Sousa,Andy Murray,Sousa,Murray,1751,-10000
+2016-580,212,20160118,Australian Open,Hard,2016,Novak Djokovic,Gilles Simon,Djokovic,Simon,-10000,2002
+2016-580,217,20160118,Australian Open,Hard,2016,Milos Raonic,Stanislas Wawrinka,Raonic,Wawrinka,133,-164
+2016-580,218,20160118,Australian Open,Hard,2016,David Ferrer,John Isner,Ferrer,Isner,-200,163
+2016-580,225,20160118,Australian Open,Hard,2016,Milos Raonic,Andy Murray,Raonic,Murray,223,-270
+2016-6120,272,20160516,Nice,Clay,2016,Marcel Granollers,Brian Baker,Granollers,Baker,-357,256
+2016-6120,273,20160516,Nice,Clay,2016,Alexander Zverev,Kyle Edmund,Zverev,Edmund,-227,175
+2016-6120,276,20160516,Nice,Clay,2016,Victor Estrella,Denis Kudla,Estrella,Kudla,-109,-116
+2016-6120,277,20160516,Nice,Clay,2016,Joao Sousa,Quentin Halys,Sousa,Halys,-294,224
+2016-6120,280,20160516,Nice,Clay,2016,Robin Haase,Adrian Mannarino,Haase,Mannarino,-227,174
+2016-6120,289,20160516,Nice,Clay,2016,Joao Sousa,Victor Estrella,Sousa,Estrella,-208,166
+2016-6120,294,20160516,Nice,Clay,2016,Alexander Zverev,Gilles Simon,Zverev,Simon,124,-159
+2016-6120,296,20160516,Nice,Clay,2016,Adrian Mannarino,Guido Pella,Mannarino,Pella,225,-294
+2016-6120,297,20160516,Nice,Clay,2016,Dominic Thiem,Andreas Seppi,Thiem,Seppi,-667,445
+2016-6967,271,20160926,Shenzhen,Hard,2016,Malek Jaziri,Stephane Robert,Jaziri,Robert,-147,118
+2016-6967,273,20160926,Shenzhen,Hard,2016,Benoit Paire,Nikoloz Basilashvili,Paire,Basilashvili,-169,134
+2016-6967,277,20160926,Shenzhen,Hard,2016,Fabio Fognini,Dudi Sela,Fognini,Sela,-182,146
+2016-6967,282,20160926,Shenzhen,Hard,2016,Pablo Andujar,Jiri Vesely,Andujar,Vesely,267,-370
+2016-6967,284,20160926,Shenzhen,Hard,2016,Mikhail Kukushkin,Lukas Rosol,Kukushkin,Rosol,134,-172
+2016-6967,288,20160926,Shenzhen,Hard,2016,Andrew Whittington,Richard Gasquet,Whittington,Gasquet,718,-1250
+2016-6967,289,20160926,Shenzhen,Hard,2016,Fabio Fognini,Mischa Zverev,Fognini,Zverev,-164,129
+2016-6967,291,20160926,Shenzhen,Hard,2016,Bernard Tomic,Ryan Harrison,Tomic,Harrison,-154,125
+2016-6967,294,20160926,Shenzhen,Hard,2016,Janko Tipsarevic,Malek Jaziri,Tipsarevic,Jaziri,-114,-112
+2016-6967,299,20160926,Shenzhen,Hard,2016,Tomas Berdych,Thomaz Bellucci,Berdych,Bellucci,-435,316
+2016-6967,300,20160926,Shenzhen,Hard,2016,Tomas Berdych,Richard Gasquet,Berdych,Gasquet,-154,125
+2016-7161,271,20160201,Quito,Clay,2016,Facundo Arguello,Joao Souza,Arguello,Souza,-119,-106
+2016-7161,275,20160201,Quito,Clay,2016,Alejandro Gonzalez,Renzo Olivo,Gonzalez,Olivo,124,-159
+2016-7161,282,20160201,Quito,Clay,2016,Gonzalo Escobar,Paolo Lorenzi,Escobar,Lorenzi,548,-909
+2016-7161,283,20160201,Quito,Clay,2016,Alejandro Falla,Giovanni Lapentti,Falla,Lapentti,-213,168
+2016-7161,287,20160201,Quito,Clay,2016,Albert Ramos,Rajeev Ram,Ramos,Ram,-455,318
+2016-7161,288,20160201,Quito,Clay,2016,Renzo Olivo,Fernando Verdasco,Olivo,Verdasco,208,-278
+2016-7161,289,20160201,Quito,Clay,2016,Victor Estrella,Andrej Martin,Estrella,Martin,-227,177
+2016-7161,291,20160201,Quito,Clay,2016,Thomaz Bellucci,Albert Montanes,Bellucci,Montanes,-345,264
+2016-7161,292,20160201,Quito,Clay,2016,Alejandro Falla,Paolo Lorenzi,Falla,Lorenzi,189,-250
+2016-7161,297,20160201,Quito,Clay,2016,Bernard Tomic,Paolo Lorenzi,Tomic,Lorenzi,-125,-101
+2016-7161,300,20160201,Quito,Clay,2016,Thomaz Bellucci,Victor Estrella,Bellucci,Estrella,-185,148
+2016-7434,271,20160201,Sofia,Hard,2016,Daniel Brands,Thomas Fabbiano,Brands,Fabbiano,-294,225
+2016-7434,273,20160201,Sofia,Hard,2016,Philipp Kohlschreiber,Sergiy Stakhovsky,Kohlschreiber,Stakhovsky,-333,246
+2016-7434,277,20160201,Sofia,Hard,2016,Martin Klizan,Alexander Lazov,Klizan,Lazov,-1667,831
+2016-7434,279,20160201,Sofia,Hard,2016,Ricardas Berankis,Dimitar Kuzmanov,Berankis,Kuzmanov,-833,538
+2016-7434,283,20160201,Sofia,Hard,2016,Hyeon Chung,Marius Copil,Chung,Copil,-244,179
+2016-7434,287,20160201,Sofia,Hard,2016,Philipp Kohlschreiber,Damir Dzumhur,Kohlschreiber,Dzumhur,-667,455
+2016-7434,289,20160201,Sofia,Hard,2016,Martin Klizan,Lukas Rosol,Klizan,Rosol,158,-204
+2016-7434,292,20160201,Sofia,Hard,2016,Marius Copil,Adrian Mannarino,Copil,Mannarino,147,-182
+2016-7434,294,20160201,Sofia,Hard,2016,Philipp Kohlschreiber,Viktor Troicki,Kohlschreiber,Troicki,-139,110
+2016-7434,295,20160201,Sofia,Hard,2016,Martin Klizan,Andreas Seppi,Klizan,Seppi,210,-270
+2016-7485,273,20161017,Antwerp,Hard,2016,Federico Delbonis,Andreas Seppi,Delbonis,Seppi,163,-217
+2016-7485,282,20161017,Antwerp,Hard,2016,Marius Copil,Joao Sousa,Copil,Sousa,169,-213
+2016-7485,284,20161017,Antwerp,Hard,2016,Tommy Robredo,Florian Mayer,Robredo,Mayer,-112,-110
+2016-7485,291,20161017,Antwerp,Hard,2016,Pablo Cuevas,Jozef Kovalik,Cuevas,Kovalik,-204,161
+2016-7581,273,20160926,Chengdu,Hard,2016,Viktor Troicki,Casper Ruud,Troicki,Ruud,-5000,1650
+2016-7581,276,20160926,Chengdu,Hard,2016,Adrian Mannarino,Denis Kudla,Mannarino,Kudla,-208,163
+2016-7581,278,20160926,Chengdu,Hard,2016,John Millman,Paolo Lorenzi,Millman,Lorenzi,-164,129
+2016-7581,280,20160926,Chengdu,Hard,2016,Dusan Lajovic,Federico Delbonis,Lajovic,Delbonis,112,-139
+2016-7581,282,20160926,Chengdu,Hard,2016,Michael Berrer,Albert Ramos,Berrer,Ramos,458,-667
+2016-7581,287,20160926,Chengdu,Hard,2016,Viktor Troicki,Marcos Baghdatis,Troicki,Baghdatis,121,-152
+2016-7581,293,20160926,Chengdu,Hard,2016,Dominic Thiem,Di Wu,Thiem,Wu,-1111,654
+2016-7581,294,20160926,Chengdu,Hard,2016,Viktor Troicki,Kevin Anderson,Troicki,Anderson,147,-189
+2016-7581,295,20160926,Chengdu,Hard,2016,Karen Khachanov,Feliciano Lopez,Khachanov,Lopez,145,-185
+2016-7581,297,20160926,Chengdu,Hard,2016,Dominic Thiem,Albert Ramos,Thiem,Ramos,-476,334
+2016-7581,300,20160926,Chengdu,Hard,2016,Albert Ramos,Karen Khachanov,Ramos,Khachanov,-103,-119
+2016-M001,276,20160111,Sydney,Hard,2016,Alexander Sarkissian,Simone Bolelli,Sarkissian,Bolelli,211,-278
+2016-M001,277,20160111,Sydney,Hard,2016,Alexandr Dolgopolov,Thomaz Bellucci,Dolgopolov,Bellucci,-256,192
+2016-M001,279,20160111,Sydney,Hard,2016,Nicolas Mahut,Adrian Mannarino,Mahut,Mannarino,108,-135
+2016-M001,283,20160111,Sydney,Hard,2016,Samuel Groth,Federico Delbonis,Groth,Delbonis,-323,242
+2016-M001,288,20160111,Sydney,Hard,2016,Pablo Cuevas,Grigor Dimitrov,Cuevas,Dimitrov,373,-526
+2016-M001,289,20160111,Sydney,Hard,2016,Alexandr Dolgopolov,Alexander Sarkissian,Dolgopolov,Sarkissian,-833,512
+2016-M001,290,20160111,Sydney,Hard,2016,Nicolas Mahut,Andreas Seppi,Mahut,Seppi,140,-175
+2016-M001,292,20160111,Sydney,Hard,2016,Federico Delbonis,Teymuraz Gabashvili,Delbonis,Gabashvili,221,-286
+2016-M001,294,20160111,Sydney,Hard,2016,Jeremy Chardy,Gilles Muller,Chardy,Muller,267,-323
+2016-M001,296,20160111,Sydney,Hard,2016,Viktor Troicki,Nicolas Mahut,Troicki,Mahut,-286,242
+2016-M001,298,20160111,Sydney,Hard,2016,Grigor Dimitrov,Gilles Muller,Dimitrov,Muller,-238,197
+2016-M001,299,20160111,Sydney,Hard,2016,Teymuraz Gabashvili,Viktor Troicki,Gabashvili,Troicki,139,-175
+2016-M001,300,20160111,Sydney,Hard,2016,Viktor Troicki,Grigor Dimitrov,Troicki,Dimitrov,200,-256
+2016-M009,239,20160509,Rome Masters,Clay,2016,Mikhail Kukushkin,Borna Coric,Kukushkin,Coric,225,-286
+2016-M009,247,20160509,Rome Masters,Clay,2016,Benoit Paire,Bernard Tomic,Paire,Tomic,-370,272
+2016-M009,250,20160509,Rome Masters,Clay,2016,Filippo Volandri,David Ferrer,Volandri,Ferrer,643,-1250
+2016-M009,252,20160509,Rome Masters,Clay,2016,Ivo Karlovic,Ernests Gulbis,Karlovic,Gulbis,146,-185
+2016-M009,256,20160509,Rome Masters,Clay,2016,Andreas Seppi,Vasek Pospisil,Seppi,Pospisil,-250,197
+2016-M009,258,20160509,Rome Masters,Clay,2016,Alexandr Dolgopolov,Dominic Thiem,Dolgopolov,Thiem,217,-278
+2016-M009,260,20160509,Rome Masters,Clay,2016,Alexander Zverev,Grigor Dimitrov,Zverev,Dimitrov,100,-133
+2016-M009,265,20160509,Rome Masters,Clay,2016,Milos Raonic,Marco Cecchinato,Raonic,Cecchinato,-1429,840
+2016-M009,267,20160509,Rome Masters,Clay,2016,Pablo Cuevas,Nicolas Mahut,Cuevas,Mahut,-833,523
+2016-M009,274,20160509,Rome Masters,Clay,2016,Benoit Paire,Stanislas Wawrinka,Paire,Wawrinka,300,-435
+2016-M009,275,20160509,Rome Masters,Clay,2016,Kevin Anderson,Juan Monaco,Anderson,Monaco,191,-256
+2016-M009,277,20160509,Rome Masters,Clay,2016,Lucas Pouille,Ernests Gulbis,Pouille,Gulbis,-137,100
+2016-M009,279,20160509,Rome Masters,Clay,2016,Richard Gasquet,Andreas Seppi,Gasquet,Seppi,-667,446
+2016-M009,280,20160509,Rome Masters,Clay,2016,Joao Sousa,Dominic Thiem,Sousa,Thiem,351,-526
+2016-M009,283,20160509,Rome Masters,Clay,2016,Milos Raonic,Nick Kyrgios,Raonic,Kyrgios,102,-132
+2016-M009,284,20160509,Rome Masters,Clay,2016,Nicolas Mahut,Thomaz Bellucci,Mahut,Bellucci,240,-312
+2016-M009,285,20160509,Rome Masters,Clay,2016,Novak Djokovic,Stephane Robert,Djokovic,Robert,-10000,2318
+2016-M009,289,20160509,Rome Masters,Clay,2016,Lucas Pouille,David Ferrer,Pouille,Ferrer,330,-455
+2016-M009,290,20160509,Rome Masters,Clay,2016,Richard Gasquet,Kei Nishikori,Gasquet,Nishikori,164,-213
+2016-M009,291,20160509,Rome Masters,Clay,2016,Roger Federer,Dominic Thiem,Federer,Thiem,-213,169
+2016-M009,293,20160509,Rome Masters,Clay,2016,Novak Djokovic,Thomaz Bellucci,Djokovic,Bellucci,-2000,1035
+2016-M009,294,20160509,Rome Masters,Clay,2016,David Goffin,Andy Murray,Goffin,Murray,309,-417
+2016-M009,297,20160509,Rome Masters,Clay,2016,Novak Djokovic,Rafael Nadal,Djokovic,Nadal,-294,234
+2016-M009,300,20160509,Rome Masters,Clay,2016,Novak Djokovic,Andy Murray,Djokovic,Murray,-222,181
+2016-M015,270,20161003,Beijing,Hard,2016,Paolo Lorenzi,Rafael Nadal,Lorenzi,Nadal,819,-1429
+2016-M015,271,20161003,Beijing,Hard,2016,Albert Ramos,Adrian Mannarino,Ramos,Mannarino,-102,-125
+2016-M015,272,20161003,Beijing,Hard,2016,Grigor Dimitrov,Steve Johnson,Dimitrov,Johnson,-185,145
+2016-M015,274,20161003,Beijing,Hard,2016,Florian Mayer,Milos Raonic,Mayer,Raonic,363,-526
+2016-M015,279,20161003,Beijing,Hard,2016,Viktor Troicki,Fabio Fognini,Troicki,Fognini,-154,123
+2016-M015,284,20161003,Beijing,Hard,2016,Konstantin Kravchuk,Andrey Kuznetsov,Kravchuk,Kuznetsov,262,-303
+2016-M015,285,20161003,Beijing,Hard,2016,Andy Murray,Andreas Seppi,Murray,Seppi,-1667,852
+2016-M015,287,20161003,Beijing,Hard,2016,Lucas Pouille,Grigor Dimitrov,Pouille,Dimitrov,-127,-101
+2016-M015,288,20161003,Beijing,Hard,2016,Malek Jaziri,Milos Raonic,Jaziri,Raonic,533,-833
+2016-M015,290,20161003,Beijing,Hard,2016,Fabio Fognini,David Ferrer,Fognini,Ferrer,195,-256
+2016-M015,291,20161003,Beijing,Hard,2016,Alexander Zverev,Jack Sock,Zverev,Sock,-154,125
+2016-M015,296,20161003,Beijing,Hard,2016,Alexander Zverev,David Ferrer,Zverev,Ferrer,-137,112
+2016-M015,297,20161003,Beijing,Hard,2016,Andy Murray,Kyle Edmund,Murray,Edmund,-1667,893
+2016-M020,272,20160104,Brisbane,Hard,2016,Radek Stepanek,Dusan Lajovic,Stepanek,Lajovic,-101,-123
+2016-M020,273,20160104,Brisbane,Hard,2016,Bernard Tomic,Nicolas Mahut,Tomic,Mahut,-500,355
+2016-M020,276,20160104,Brisbane,Hard,2016,Yoshihito Nishioka,Lucas Pouille,Nishioka,Pouille,-169,133
+2016-M020,280,20160104,Brisbane,Hard,2016,Hyeon Chung,Samuel Groth,Chung,Groth,-122,-106
+2016-M020,282,20160104,Brisbane,Hard,2016,Grigor Dimitrov,Gilles Simon,Dimitrov,Simon,-154,118
+2016-M020,288,20160104,Brisbane,Hard,2016,Ivan Dodig,Milos Raonic,Dodig,Raonic,277,-357
+2016-M020,289,20160104,Brisbane,Hard,2016,David Goffin,Lucas Pouille,Goffin,Pouille,-588,394
+2016-M020,292,20160104,Brisbane,Hard,2016,Viktor Troicki,Grigor Dimitrov,Troicki,Dimitrov,218,-278
+2016-M020,293,20160104,Brisbane,Hard,2016,Roger Federer,Tobias Kamke,Federer,Kamke,-1429,790
+2016-M020,294,20160104,Brisbane,Hard,2016,Bernard Tomic,Kei Nishikori,Tomic,Nishikori,233,-303
+2016-M020,295,20160104,Brisbane,Hard,2016,Lucas Pouille,Milos Raonic,Pouille,Raonic,391,-556
+2016-M020,296,20160104,Brisbane,Hard,2016,Marin Cilic,Dominic Thiem,Cilic,Thiem,-256,200
+2016-M052,273,20160215,Rio de Janeiro,Clay,2016,Dominic Thiem,Pablo Andujar,Thiem,Andujar,-312,229
+2016-M052,274,20160215,Rio de Janeiro,Clay,2016,Guido Pella,John Isner,Pella,Isner,209,-270
+2016-M052,275,20160215,Rio de Janeiro,Clay,2016,Santiago Giraldo,Gastao Elias,Giraldo,Elias,-149,117
+2016-M052,279,20160215,Rio de Janeiro,Clay,2016,Marco Cecchinato,Paolo Lorenzi,Cecchinato,Lorenzi,208,-270
+2016-M052,280,20160215,Rio de Janeiro,Clay,2016,Pablo Cuevas,Facundo Bagnis,Cuevas,Bagnis,-385,279
+2016-M052,286,20160215,Rio de Janeiro,Clay,2016,Albert Ramos,David Ferrer,Ramos,Ferrer,536,-833
+2016-M052,288,20160215,Rio de Janeiro,Clay,2016,Santiago Giraldo,Guido Pella,Giraldo,Pella,-112,-111
+2016-M052,294,20160215,Rio de Janeiro,Clay,2016,Dominic Thiem,David Ferrer,Thiem,Ferrer,149,-189
+2016-M052,296,20160215,Rio de Janeiro,Clay,2016,Pablo Cuevas,Federico Delbonis,Cuevas,Delbonis,-200,162
+2016-M052,300,20160215,Rio de Janeiro,Clay,2016,Pablo Cuevas,Guido Pella,Cuevas,Pella,-250,195
+2016-0308,275,20160425,Munich,Clay,2016,Florian Mayer,Matthias Bachinger,Mayer,Bachinger,-123,-101
+2016-0308,278,20160425,Munich,Clay,2016,Thomaz Bellucci,Mikhail Youzhny,Bellucci,Youzhny,-189,148
+2016-0308,282,20160425,Munich,Clay,2016,Alexander Zverev,Malek Jaziri,Zverev,Jaziri,106,-128
+2016-0308,283,20160425,Munich,Clay,2016,Denis Istomin,Lukas Rosol,Istomin,Rosol,138,-172
+2016-0308,287,20160425,Munich,Clay,2016,Mikhail Kukushkin,Fabio Fognini,Kukushkin,Fognini,282,-370
+2016-0308,291,20160425,Munich,Clay,2016,Santiago Giraldo,Dominic Thiem,Giraldo,Thiem,468,-714
+2016-0308,293,20160425,Munich,Clay,2016,Victor Estrella,David Goffin,Estrella,Goffin,666,-1111
+2016-0308,297,20160425,Munich,Clay,2016,Alexander Zverev,David Goffin,Zverev,Goffin,143,-182
+2016-0308,300,20160425,Munich,Clay,2016,Philipp Kohlschreiber,Dominic Thiem,Kohlschreiber,Thiem,-115,-106
+2016-0319,271,20160718,Kitzbuhel,Clay,2016,Filippo Volandri,Karen Khachanov,Volandri,Khachanov,133,-167
+2016-0319,272,20160718,Kitzbuhel,Clay,2016,Facundo Bagnis,Mischa Zverev,Bagnis,Zverev,-182,146
+2016-0319,275,20160718,Kitzbuhel,Clay,2016,Maximo Gonzalez,Adam Pavlasek,Gonzalez,Pavlasek,-132,104
+2016-0319,286,20160718,Kitzbuhel,Clay,2016,Philipp Kohlschreiber,Karen Khachanov,Kohlschreiber,Khachanov,-667,433
+2016-0319,289,20160718,Kitzbuhel,Clay,2016,Igor Sijsling,Nikoloz Basilashvili,Sijsling,Basilashvili,125,-156
+2016-0319,297,20160718,Kitzbuhel,Clay,2016,Jurgen Melzer,Gerald Melzer,Melzer,Melzer,110,-137
+2016-0321,272,20160606,Stuttgart,Grass,2016,Denis Kudla,Dusan Lajovic,Kudla,Lajovic,-345,252
+2016-0321,280,20160606,Stuttgart,Grass,2016,Illya Marchenko,Samuel Groth,Marchenko,Groth,-102,-125
+2016-0321,283,20160606,Stuttgart,Grass,2016,Michael Berrer,Malek Jaziri,Berrer,Jaziri,-139,110
+2016-0321,286,20160606,Stuttgart,Grass,2016,Marin Cilic,Radek Stepanek,Cilic,Stepanek,-217,171
+2016-0321,287,20160606,Stuttgart,Grass,2016,Denis Kudla,Philipp Kohlschreiber,Kudla,Kohlschreiber,372,-556
+2016-0321,291,20160606,Stuttgart,Grass,2016,Samuel Groth,Dominic Thiem,Groth,Thiem,177,-227
+2016-0321,294,20160606,Stuttgart,Grass,2016,Radek Stepanek,Philipp Kohlschreiber,Stepanek,Kohlschreiber,165,-213
+2016-0321,296,20160606,Stuttgart,Grass,2016,Mikhail Youzhny,Dominic Thiem,Youzhny,Thiem,179,-233
+2016-0321,297,20160606,Stuttgart,Grass,2016,Florian Mayer,Roger Federer,Mayer,Federer,511,-714
+2016-0329,271,20161003,Tokyo,Hard,2016,Philipp Kohlschreiber,Gilles Simon,Kohlschreiber,Simon,166,-208
+2016-0329,274,20161003,Tokyo,Hard,2016,Tomas Berdych,Gilles Muller,Berdych,Muller,-303,229
+2016-0329,277,20161003,Tokyo,Hard,2016,Ryan Harrison,Nick Kyrgios,Harrison,Kyrgios,231,-303
+2016-0329,278,20161003,Tokyo,Hard,2016,Feliciano Lopez,James Duckworth,Lopez,Duckworth,-233,183
+2016-0329,282,20161003,Tokyo,Hard,2016,David Goffin,Yoshihito Nishioka,Goffin,Nishioka,-500,357
+2016-0329,283,20161003,Tokyo,Hard,2016,Kevin Anderson,Jiri Vesely,Anderson,Vesely,-175,140
+2016-0329,285,20161003,Tokyo,Hard,2016,Donald Young,Kei Nishikori,Young,Nishikori,799,-1429
+2016-0329,286,20161003,Tokyo,Hard,2016,Gael Monfils,Gilles Simon,Monfils,Simon,-303,229
+2016-0329,288,20161003,Tokyo,Hard,2016,Gilles Muller,Marcos Baghdatis,Muller,Baghdatis,-116,-108
+2016-0329,294,20161003,Tokyo,Hard,2016,Gael Monfils,Ivo Karlovic,Monfils,Karlovic,-312,237
+2016-0329,297,20161003,Tokyo,Hard,2016,David Goffin,Joao Sousa,Goffin,Sousa,-417,297
+2016-0329,298,20161003,Tokyo,Hard,2016,Gael Monfils,Nick Kyrgios,Monfils,Kyrgios,-164,127
+2016-0329,300,20161003,Tokyo,Hard,2016,Nick Kyrgios,David Goffin,Kyrgios,Goffin,-217,173
+2016-0337,270,20161024,Vienna,Hard,2016,Tomas Berdych,Nikoloz Basilashvili,Berdych,Basilashvili,-625,437
+2016-0337,271,20161024,Vienna,Hard,2016,Karen Khachanov,Andreas Seppi,Khachanov,Seppi,-141,110
+2016-0337,273,20161024,Vienna,Hard,2016,Steve Johnson,Ivo Karlovic,Johnson,Karlovic,-101,-128
+2016-0337,276,20161024,Vienna,Hard,2016,Philipp Kohlschreiber,Stephane Robert,Kohlschreiber,Robert,-345,258
+2016-0337,282,20161024,Vienna,Hard,2016,Lucas Pouille,Feliciano Lopez,Pouille,Lopez,-196,154
+2016-0337,285,20161024,Vienna,Hard,2016,Martin Klizan,Andy Murray,Klizan,Murray,1404,-5000
+2016-0337,286,20161024,Vienna,Hard,2016,Nikoloz Basilashvili,Karen Khachanov,Basilashvili,Khachanov,134,-169
+2016-0337,291,20161024,Vienna,Hard,2016,Viktor Troicki,Dominic Thiem,Troicki,Thiem,220,-286
+2016-0337,293,20161024,Vienna,Hard,2016,Gilles Simon,Andy Murray,Simon,Murray,675,-1111
+2016-0337,294,20161024,Vienna,Hard,2016,Karen Khachanov,Ivo Karlovic,Khachanov,Karlovic,122,-152
+2016-0337,296,20161024,Vienna,Hard,2016,David Ferrer,Viktor Troicki,Ferrer,Troicki,-128,104
+2016-0341,272,20160919,Metz,Hard,2016,Andreas Seppi,Illya Marchenko,Seppi,Marchenko,-143,112
+2016-0341,278,20160919,Metz,Hard,2016,Benoit Paire,Vincent Millot,Paire,Millot,-200,158
+2016-0341,282,20160919,Metz,Hard,2016,Gilles Muller,Horacio Zeballos,Muller,Zeballos,-476,330
+2016-0341,289,20160919,Metz,Hard,2016,Dustin Brown,Julien Benneteau,Brown,Benneteau,116,-145
+2016-0341,294,20160919,Metz,Hard,2016,David Goffin,Nicolas Mahut,Goffin,Mahut,-222,170
+2016-0341,296,20160919,Metz,Hard,2016,Malek Jaziri,Gilles Simon,Jaziri,Simon,248,-333
+2016-0341,297,20160919,Metz,Hard,2016,Gilles Muller,Dominic Thiem,Muller,Thiem,131,-169
+2016-0341,298,20160919,Metz,Hard,2016,David Goffin,Lucas Pouille,Goffin,Pouille,-217,172
+2016-0341,299,20160919,Metz,Hard,2016,Gilles Simon,Dominic Thiem,Simon,Thiem,154,-196
+2016-0341,300,20160919,Metz,Hard,2016,Lucas Pouille,Dominic Thiem,Pouille,Thiem,137,-175
+2016-0352,248,20161031,Paris Masters,Hard,2016,Paolo Lorenzi,Benoit Paire,Lorenzi,Paire,106,-132
+2016-0352,255,20161031,Paris Masters,Hard,2016,Jack Sock,Philipp Kohlschreiber,Sock,Kohlschreiber,-159,127
+2016-0352,259,20161031,Paris Masters,Hard,2016,John Isner,Mischa Zverev,Isner,Zverev,-133,106
+2016-0352,268,20161031,Paris Masters,Hard,2016,Gilles Muller,Nicolas Almagro,Muller,Almagro,-294,231
+2016-0352,270,20161031,Paris Masters,Hard,2016,Andy Murray,Fernando Verdasco,Murray,Verdasco,-1667,858
+2016-0352,271,20161031,Paris Masters,Hard,2016,Feliciano Lopez,Lucas Pouille,Lopez,Pouille,137,-172
+2016-0352,275,20161031,Paris Masters,Hard,2016,Paolo Lorenzi,Pablo Cuevas,Lorenzi,Cuevas,-145,116
+2016-0352,277,20161031,Paris Masters,Hard,2016,Viktor Troicki,Kei Nishikori,Troicki,Nishikori,365,-500
+2016-0352,278,20161031,Paris Masters,Hard,2016,Dominic Thiem,Jack Sock,Thiem,Sock,-147,119
+2016-0352,279,20161031,Paris Masters,Hard,2016,Steve Johnson,Richard Gasquet,Johnson,Gasquet,179,-227
+2016-0352,280,20161031,Paris Masters,Hard,2016,David Ferrer,John Isner,Ferrer,Isner,-110,-114
+2016-0352,284,20161031,Paris Masters,Hard,2016,Grigor Dimitrov,Marcos Baghdatis,Dimitrov,Baghdatis,-278,216
+2016-0352,285,20161031,Paris Masters,Hard,2016,Gilles Muller,Novak Djokovic,Muller,Djokovic,654,-1000
+2016-0352,286,20161031,Paris Masters,Hard,2016,Andy Murray,Lucas Pouille,Murray,Pouille,-909,658
+2016-0352,290,20161031,Paris Masters,Hard,2016,Jack Sock,Richard Gasquet,Sock,Gasquet,-102,-119
+2016-0352,292,20161031,Paris Masters,Hard,2016,David Goffin,Marin Cilic,Goffin,Cilic,140,-172
+2016-0352,299,20161031,Paris Masters,Hard,2016,John Isner,Marin Cilic,Isner,Cilic,224,-286
+2016-0375,273,20160201,Montpellier,Hard,2016,Michael Berrer,Borna Coric,Berrer,Coric,210,-270
+2016-0375,282,20160201,Montpellier,Hard,2016,Marcos Baghdatis,Lukas Lacko,Baghdatis,Lacko,-227,174
+2016-0375,291,20160201,Montpellier,Hard,2016,Dustin Brown,Gilles Simon,Brown,Simon,366,-500
+2016-0375,292,20160201,Montpellier,Hard,2016,Marcos Baghdatis,Taro Daniel,Baghdatis,Daniel,-238,187
+2016-0375,293,20160201,Montpellier,Hard,2016,Ernests Gulbis,Richard Gasquet,Gulbis,Gasquet,162,-208
+2016-0375,296,20160201,Montpellier,Hard,2016,Ruben Bemelmans,Dustin Brown,Bemelmans,Brown,131,-169
+2016-0375,299,20160201,Montpellier,Hard,2016,Dustin Brown,Richard Gasquet,Brown,Gasquet,282,-370
+2016-0414,275,20160711,Hamburg,Clay,2016,Stephane Robert,Leonardo Mayer,Robert,Mayer,150,-189
+2016-0414,282,20160711,Hamburg,Clay,2016,Jeremy Chardy,Maximo Gonzalez,Chardy,Gonzalez,-385,286
+2016-0414,283,20160711,Hamburg,Clay,2016,Renzo Olivo,Mikhail Youzhny,Olivo,Youzhny,179,-233
+2016-0414,285,20160711,Hamburg,Clay,2016,Carlos Berlocq,Philipp Kohlschreiber,Berlocq,Kohlschreiber,357,-500
+2016-0414,291,20160711,Hamburg,Clay,2016,Thiago Monteiro,Pablo Cuevas,Monteiro,Cuevas,513,-769
+2016-0414,292,20160711,Hamburg,Clay,2016,Maximo Gonzalez,Renzo Olivo,Gonzalez,Olivo,-175,137
+2016-0414,293,20160711,Hamburg,Clay,2016,Nicolas Kicker,Philipp Kohlschreiber,Kicker,Kohlschreiber,758,-1429
+2016-0414,299,20160711,Hamburg,Clay,2016,Pablo Cuevas,Renzo Olivo,Cuevas,Olivo,-909,584
+2016-0414,300,20160711,Hamburg,Clay,2016,Martin Klizan,Pablo Cuevas,Klizan,Cuevas,256,-333
+2016-0439,271,20160718,Umag,Clay,2016,Leonardo Mayer,Nikola Mektic,Mayer,Mektic,-333,250
+2016-0439,272,20160718,Umag,Clay,2016,Sergiy Stakhovsky,Andrej Martin,Stakhovsky,Martin,-118,-111
+2016-0439,278,20160718,Umag,Clay,2016,Nicolas Almagro,Damir Dzumhur,Almagro,Dzumhur,-270,206
+2016-0439,279,20160718,Umag,Clay,2016,Thomas Fabbiano,Franco Skugor,Fabbiano,Skugor,117,-147
+2016-0439,280,20160718,Umag,Clay,2016,Renzo Olivo,Andre Ghem,Olivo,Ghem,-244,184
+2016-0439,286,20160718,Umag,Clay,2016,Joao Sousa,Leonardo Mayer,Sousa,Mayer,-116,-106
+2016-0439,290,20160718,Umag,Clay,2016,Damir Dzumhur,Thomas Fabbiano,Dzumhur,Fabbiano,-323,246
+2016-0439,293,20160718,Umag,Clay,2016,Gastao Elias,Pablo Cuevas,Elias,Cuevas,383,-556
+2016-0439,295,20160718,Umag,Clay,2016,Jeremy Chardy,Carlos Berlocq,Chardy,Berlocq,-161,124
+2016-0439,296,20160718,Umag,Clay,2016,Damir Dzumhur,Fabio Fognini,Dzumhur,Fognini,164,-213
+2016-0496,276,20160215,Marseille,Hard,2016,Vasek Pospisil,Nick Kyrgios,Pospisil,Kyrgios,193,-250
+2016-0496,277,20160215,Marseille,Hard,2016,Teymuraz Gabashvili,Gilles Simon,Gabashvili,Simon,338,-476
+2016-0496,278,20160215,Marseille,Hard,2016,David Guez,Quentin Halys,Guez,Halys,135,-172
+2016-0496,279,20160215,Marseille,Hard,2016,Andrey Kuznetsov,Lucas Pouille,Kuznetsov,Pouille,-152,118
+2016-0496,282,20160215,Marseille,Hard,2016,Benoit Paire,Simone Bolelli,Paire,Bolelli,-192,150
+2016-0496,283,20160215,Marseille,Hard,2016,Vincent Millot,Nicolas Mahut,Millot,Mahut,238,-312
+2016-0496,286,20160215,Marseille,Hard,2016,Tomas Berdych,Alexander Zverev,Berdych,Zverev,-556,382
+2016-0496,287,20160215,Marseille,Hard,2016,Mischa Zverev,David Goffin,Zverev,Goffin,247,-323
+2016-0496,289,20160215,Marseille,Hard,2016,Nick Kyrgios,Teymuraz Gabashvili,Kyrgios,Gabashvili,-345,263
+2016-0496,290,20160215,Marseille,Hard,2016,Quentin Halys,Andrey Kuznetsov,Halys,Kuznetsov,240,-312
+2016-0496,294,20160215,Marseille,Hard,2016,Tomas Berdych,David Goffin,Berdych,Goffin,-256,199
+2016-0496,296,20160215,Marseille,Hard,2016,Andrey Kuznetsov,Marin Cilic,Kuznetsov,Cilic,313,-417
+2016-0496,297,20160215,Marseille,Hard,2016,Benoit Paire,Stanislas Wawrinka,Paire,Wawrinka,301,-417
+2016-0496,298,20160215,Marseille,Hard,2016,Tomas Berdych,Nick Kyrgios,Berdych,Kyrgios,-152,121
+2016-0500,271,20160613,Halle,Grass,2016,Florian Mayer,Brian Baker,Mayer,Baker,-526,365
+2016-0500,275,20160613,Halle,Grass,2016,Teymuraz Gabashvili,Paolo Lorenzi,Gabashvili,Lorenzi,-286,220
+2016-0500,276,20160613,Halle,Grass,2016,Andrey Kuznetsov,Ivo Karlovic,Kuznetsov,Karlovic,195,-244
+2016-0500,277,20160613,Halle,Grass,2016,Marcel Granollers,Philipp Kohlschreiber,Granollers,Kohlschreiber,434,-625
+2016-0500,278,20160613,Halle,Grass,2016,Viktor Troicki,Alexander Zverev,Troicki,Zverev,112,-139
+2016-0500,279,20160613,Halle,Grass,2016,Benjamin Becker,Ernests Gulbis,Becker,Gulbis,-105,-118
+2016-0500,281,20160613,Halle,Grass,2016,Marcos Baghdatis,Tomas Berdych,Baghdatis,Berdych,244,-323
+2016-0500,282,20160613,Halle,Grass,2016,David Goffin,Borna Coric,Goffin,Coric,-476,354
+2016-0500,284,20160613,Halle,Grass,2016,Malek Jaziri,Ricardas Berankis,Jaziri,Berankis,137,-175
+2016-0500,289,20160613,Halle,Grass,2016,Ivo Karlovic,Philipp Kohlschreiber,Karlovic,Kohlschreiber,156,-196
+2016-0500,293,20160613,Halle,Grass,2016,Malek Jaziri,Roger Federer,Jaziri,Federer,1188,-2500
+2016-0500,294,20160613,Halle,Grass,2016,Florian Mayer,Andreas Seppi,Mayer,Seppi,149,-192
+2016-0500,298,20160613,Halle,Grass,2016,Florian Mayer,Dominic Thiem,Mayer,Thiem,351,-500
+2016-0506,271,20160208,Buenos Aires,Clay,2016,Renzo Olivo,Facundo Bagnis,Olivo,Bagnis,163,-208
+2016-0506,273,20160208,Buenos Aires,Clay,2016,Albert Ramos,Pablo Cuevas,Ramos,Cuevas,164,-208
+2016-0506,276,20160208,Buenos Aires,Clay,2016,Nicolas Almagro,Albert Montanes,Almagro,Montanes,-312,241
+2016-0506,277,20160208,Buenos Aires,Clay,2016,Federico Delbonis,Fabio Fognini,Delbonis,Fognini,154,-196
+2016-0506,283,20160208,Buenos Aires,Clay,2016,Pablo Andujar,Paolo Lorenzi,Andujar,Lorenzi,-103,-125
+2016-0506,286,20160208,Buenos Aires,Clay,2016,David Ferrer,Renzo Olivo,Ferrer,Olivo,-1429,822
+2016-0506,290,20160208,Buenos Aires,Clay,2016,Dominic Thiem,Gastao Elias,Thiem,Elias,-588,420
+2016-0506,291,20160208,Buenos Aires,Clay,2016,Dusan Lajovic,John Isner,Lajovic,Isner,159,-200
+2016-0506,297,20160208,Buenos Aires,Clay,2016,Paolo Lorenzi,Rafael Nadal,Lorenzi,Nadal,969,-2000
+2016-0506,298,20160208,Buenos Aires,Clay,2016,David Ferrer,Nicolas Almagro,Ferrer,Almagro,-270,213
+2016-0533,278,20160222,Sao Paulo,Clay,2016,Nicolas Almagro,Thiago Monteiro,Almagro,Monteiro,-769,484
+2016-0533,282,20160222,Sao Paulo,Clay,2016,Pablo Andujar,Gastao Elias,Andujar,Elias,-154,121
+2016-0533,291,20160222,Sao Paulo,Clay,2016,Facundo Bagnis,Pablo Cuevas,Bagnis,Cuevas,359,-500
+2016-0533,293,20160222,Sao Paulo,Clay,2016,Dusan Lajovic,Benoit Paire,Lajovic,Paire,100,-128
+2016-0533,296,20160222,Sao Paulo,Clay,2016,Thiago Monteiro,Pablo Cuevas,Monteiro,Cuevas,369,-526
+2016-0533,299,20160222,Sao Paulo,Clay,2016,Pablo Cuevas,Dusan Lajovic,Cuevas,Lajovic,-385,285
+2016-0891,273,20160104,Chennai,Hard,2016,Aljaz Bedene,Vasek Pospisil,Bedene,Pospisil,142,-182
+2016-0891,276,20160104,Chennai,Hard,2016,Austin Krajicek,Rajeev Ram,Krajicek,Ram,104,-132
+2016-0891,277,20160104,Chennai,Hard,2016,Marcel Granollers,Borna Coric,Granollers,Coric,181,-238
+2016-0891,278,20160104,Chennai,Hard,2016,Gilles Muller,Karen Khachanov,Muller,Khachanov,-303,238
+2016-0891,283,20160104,Chennai,Hard,2016,Ante Pavic,Nicolas Almagro,Pavic,Almagro,196,-263
+2016-0891,284,20160104,Chennai,Hard,2016,Somdev Devvarman,Andrey Rublev,Devvarman,Rublev,114,-143
+2016-0891,286,20160104,Chennai,Hard,2016,Alexander Kudryavtsev,Ramkumar Ramanathan,Kudryavtsev,Ramanathan,-110,-116
+2016-0891,290,20160104,Chennai,Hard,2016,Gilles Muller,Thomas Fabbiano,Muller,Fabbiano,-556,380
+2016-0891,291,20160104,Chennai,Hard,2016,Lukas Rosol,Benoit Paire,Rosol,Paire,150,-189
+2016-0891,293,20160104,Chennai,Hard,2016,Andrey Rublev,Stanislas Wawrinka,Rublev,Wawrinka,561,-833
+2016-0891,294,20160104,Chennai,Hard,2016,Ramkumar Ramanathan,Aljaz Bedene,Ramanathan,Bedene,387,-556
+2016-0891,298,20160104,Chennai,Hard,2016,Aljaz Bedene,Borna Coric,Bedene,Coric,154,-192
+2016-0891,299,20160104,Chennai,Hard,2016,Benoit Paire,Stanislas Wawrinka,Paire,Wawrinka,362,-500
+2016-580,102,20160118,Australian Open,Hard,2016,Denis Kudla,Filip Krajinovic,Kudla,Krajinovic,-250,194
+2016-580,103,20160118,Australian Open,Hard,2016,Andreas Seppi,Teymuraz Gabashvili,Seppi,Gabashvili,-161,127
+2016-580,104,20160118,Australian Open,Hard,2016,Federico Delbonis,Ivo Karlovic,Delbonis,Karlovic,282,-370
+2016-580,109,20160118,Australian Open,Hard,2016,Illya Marchenko,Omar Jasika,Marchenko,Jasika,-667,463
+2016-580,113,20160118,Australian Open,Hard,2016,Daniel Brands,Victor Estrella,Brands,Estrella,-256,200
+2016-580,114,20160118,Australian Open,Hard,2016,Di Wu,Austin Krajicek,Wu,Krajicek,108,-135
+2016-580,115,20160118,Australian Open,Hard,2016,Kei Nishikori,Philipp Kohlschreiber,Nishikori,Kohlschreiber,-435,329
+2016-580,116,20160118,Australian Open,Hard,2016,Nikoloz Basilashvili,Roger Federer,Basilashvili,Federer,2052,-10000
+2016-580,117,20160118,Australian Open,Hard,2016,Alexandr Dolgopolov,Ricardas Berankis,Dolgopolov,Berankis,-500,354
+2016-580,119,20160118,Australian Open,Hard,2016,Grigor Dimitrov,Paolo Lorenzi,Dimitrov,Lorenzi,-1667,801
+2016-580,121,20160118,Australian Open,Hard,2016,Nicolas Almagro,Julien Benneteau,Almagro,Benneteau,-385,295
+2016-580,122,20160118,Australian Open,Hard,2016,Damir Dzumhur,Kyle Edmund,Dzumhur,Edmund,274,-357
+2016-580,123,20160118,Australian Open,Hard,2016,David Goffin,Sergiy Stakhovsky,Goffin,Stakhovsky,-769,516
+2016-580,129,20160118,Australian Open,Hard,2016,Pablo Cuevas,Yoshihito Nishioka,Cuevas,Nishioka,-213,166
+2016-580,131,20160118,Australian Open,Hard,2016,Tomas Berdych,Yuki Bhambri,Berdych,Bhambri,-10000,2207
+2016-580,132,20160118,Australian Open,Hard,2016,Fernando Verdasco,Rafael Nadal,Verdasco,Nadal,736,-1250
+2016-580,134,20160118,Australian Open,Hard,2016,Andrey Kuznetsov,Ryan Harrison,Kuznetsov,Harrison,-250,197
+2016-580,135,20160118,Australian Open,Hard,2016,Jeremy Chardy,Ernests Gulbis,Chardy,Gulbis,-294,233
+2016-580,140,20160118,Australian Open,Hard,2016,Lucas Pouille,Milos Raonic,Pouille,Raonic,918,-2000
+2016-580,145,20160118,Australian Open,Hard,2016,Lukas Rosol,Taro Daniel,Rosol,Daniel,-286,220
+2016-580,149,20160118,Australian Open,Hard,2016,Lleyton Hewitt,James Duckworth,Hewitt,Duckworth,-200,156
+2016-580,150,20160118,Australian Open,Hard,2016,Jordan Thompson,Thomaz Bellucci,Thompson,Bellucci,198,-256
+2016-580,151,20160118,Australian Open,Hard,2016,Steve Johnson,Aljaz Bedene,Johnson,Bedene,-154,123
+2016-580,152,20160118,Australian Open,Hard,2016,Daniel Evans,Feliciano Lopez,Evans,Lopez,303,-417
+2016-580,154,20160118,Australian Open,Hard,2016,Marcel Granollers,Matthew Ebden,Granollers,Ebden,-222,175
+2016-580,157,20160118,Australian Open,Hard,2016,Brian Baker,Simone Bolelli,Baker,Bolelli,602,-1000
+2016-580,159,20160118,Australian Open,Hard,2016,Fabio Fognini,Gilles Muller,Fognini,Muller,104,-132
+2016-580,160,20160118,Australian Open,Hard,2016,Mikhail Kukushkin,Joao Sousa,Kukushkin,Sousa,112,-143
+2016-580,161,20160118,Australian Open,Hard,2016,Donald Young,Santiago Giraldo,Young,Giraldo,-192,152
+2016-580,163,20160118,Australian Open,Hard,2016,Andy Murray,Alexander Zverev,Murray,Zverev,-5000,1420
+2016-580,165,20160118,Australian Open,Hard,2016,Andreas Seppi,Denis Kudla,Seppi,Kudla,-286,224
+2016-580,171,20160118,Australian Open,Hard,2016,Kei Nishikori,Austin Krajicek,Nishikori,Krajicek,-3333,1356
+2016-580,172,20160118,Australian Open,Hard,2016,Alexandr Dolgopolov,Roger Federer,Dolgopolov,Federer,815,-1667
+2016-580,173,20160118,Australian Open,Hard,2016,Grigor Dimitrov,Marco Trungelliti,Dimitrov,Trungelliti,-2500,1183
+2016-580,174,20160118,Australian Open,Hard,2016,Nicolas Almagro,Dominic Thiem,Almagro,Thiem,213,-270
+2016-580,175,20160118,Australian Open,Hard,2016,David Goffin,Damir Dzumhur,Goffin,Dzumhur,-2000,1036
+2016-580,178,20160118,Australian Open,Hard,2016,Pablo Cuevas,Nick Kyrgios,Cuevas,Kyrgios,527,-833
+2016-580,179,20160118,Australian Open,Hard,2016,Tomas Berdych,Mirza Basic,Berdych,Basic,-3333,1374
+2016-580,182,20160118,Australian Open,Hard,2016,Nicolas Mahut,Gael Monfils,Mahut,Monfils,333,-455
+2016-580,184,20160118,Australian Open,Hard,2016,Tommy Robredo,Milos Raonic,Robredo,Raonic,852,-1667
+2016-580,185,20160118,Australian Open,Hard,2016,Viktor Troicki,Tim Smyczek,Troicki,Smyczek,-476,348
+2016-580,191,20160118,Australian Open,Hard,2016,John Isner,Marcel Granollers,Isner,Granollers,-833,512
+2016-580,196,20160118,Australian Open,Hard,2016,Andreas Seppi,Novak Djokovic,Seppi,Djokovic,2438,-10000
+2016-580,203,20160118,Australian Open,Hard,2016,Tomas Berdych,Nick Kyrgios,Berdych,Kyrgios,-152,122
+2016-580,204,20160118,Australian Open,Hard,2016,Andrey Kuznetsov,Dudi Sela,Kuznetsov,Sela,-204,165
+2016-580,205,20160118,Australian Open,Hard,2016,Stephane Robert,Gael Monfils,Robert,Monfils,772,-1429
+2016-580,206,20160118,Australian Open,Hard,2016,Viktor Troicki,Milos Raonic,Troicki,Raonic,347,-476
+2016-580,207,20160118,Australian Open,Hard,2016,Stanislas Wawrinka,Lukas Rosol,Wawrinka,Rosol,-1429,793
+2016-580,209,20160118,Australian Open,Hard,2016,John Isner,Feliciano Lopez,Isner,Lopez,-204,163
+2016-580,210,20160118,Australian Open,Hard,2016,John Millman,Bernard Tomic,Millman,Tomic,482,-714
+2016-580,214,20160118,Australian Open,Hard,2016,David Goffin,Roger Federer,Goffin,Federer,1065,-2000
+2016-580,216,20160118,Australian Open,Hard,2016,Gael Monfils,Andrey Kuznetsov,Monfils,Kuznetsov,-417,318
+2016-580,219,20160118,Australian Open,Hard,2016,Andy Murray,Bernard Tomic,Murray,Tomic,-1111,703
+2016-580,220,20160118,Australian Open,Hard,2016,Kei Nishikori,Novak Djokovic,Nishikori,Djokovic,495,-714
+2016-580,221,20160118,Australian Open,Hard,2016,Tomas Berdych,Roger Federer,Berdych,Federer,415,-588
+2016-580,222,20160118,Australian Open,Hard,2016,Milos Raonic,Gael Monfils,Raonic,Monfils,-286,225
+2016-580,223,20160118,Australian Open,Hard,2016,Andy Murray,David Ferrer,Murray,Ferrer,-556,398
+2016-580,224,20160118,Australian Open,Hard,2016,Roger Federer,Novak Djokovic,Federer,Djokovic,247,-303
+2016-580,226,20160118,Australian Open,Hard,2016,Andy Murray,Novak Djokovic,Murray,Djokovic,401,-500
+2016-6120,278,20160516,Nice,Clay,2016,Fabio Fognini,Donald Young,Fognini,Young,-357,267
+2016-6120,284,20160516,Nice,Clay,2016,Leonardo Mayer,Jiri Vesely,Mayer,Vesely,-167,131
+2016-6120,287,20160516,Nice,Clay,2016,Marcel Granollers,Alexander Zverev,Granollers,Zverev,158,-196
+2016-6120,290,20160516,Nice,Clay,2016,Donald Young,Guido Pella,Young,Pella,200,-263
+2016-6120,291,20160516,Nice,Clay,2016,Adrian Mannarino,Benoit Paire,Mannarino,Paire,222,-286
+2016-6120,293,20160516,Nice,Clay,2016,Leonardo Mayer,Dominic Thiem,Mayer,Thiem,229,-294
+2016-6120,295,20160516,Nice,Clay,2016,Kevin Anderson,Joao Sousa,Anderson,Sousa,-143,110
+2016-6120,298,20160516,Nice,Clay,2016,Alexander Zverev,Joao Sousa,Zverev,Sousa,-169,131
+2016-6120,299,20160516,Nice,Clay,2016,Adrian Mannarino,Dominic Thiem,Mannarino,Thiem,599,-1000
+2016-6120,300,20160516,Nice,Clay,2016,Alexander Zverev,Dominic Thiem,Zverev,Thiem,318,-435
+2016-6967,272,20160926,Shenzhen,Hard,2016,Ze Zhang,Janko Tipsarevic,Zhang,Tipsarevic,198,-256
+2016-6967,276,20160926,Shenzhen,Hard,2016,Mischa Zverev,Zhe Li,Zverev,Li,-625,443
+2016-6967,279,20160926,Shenzhen,Hard,2016,Thomaz Bellucci,Gastao Elias,Bellucci,Elias,-200,159
+2016-6967,286,20160926,Shenzhen,Hard,2016,David Goffin,Malek Jaziri,Goffin,Jaziri,-500,350
+2016-6967,287,20160926,Shenzhen,Hard,2016,Janko Tipsarevic,Benoit Paire,Tipsarevic,Paire,-105,-119
+2016-6967,293,20160926,Shenzhen,Hard,2016,Mikhail Kukushkin,Tomas Berdych,Kukushkin,Berdych,459,-667
+2016-6967,295,20160926,Shenzhen,Hard,2016,Richard Gasquet,Mischa Zverev,Gasquet,Zverev,-417,301
+2016-6967,296,20160926,Shenzhen,Hard,2016,Thomaz Bellucci,Bernard Tomic,Bellucci,Tomic,216,-294
+2016-6967,297,20160926,Shenzhen,Hard,2016,Jiri Vesely,Tomas Berdych,Vesely,Berdych,266,-357
+2016-6967,298,20160926,Shenzhen,Hard,2016,Janko Tipsarevic,Richard Gasquet,Tipsarevic,Gasquet,252,-333
+2016-7161,273,20160201,Quito,Clay,2016,Dusan Lajovic,Albert Ramos,Lajovic,Ramos,161,-208
+2016-7161,276,20160201,Quito,Clay,2016,Andrej Martin,Marcel Granollers,Martin,Granollers,220,-286
+2016-7161,277,20160201,Quito,Clay,2016,Guido Pella,Victor Estrella,Pella,Estrella,-172,137
+2016-7161,286,20160201,Quito,Clay,2016,Feliciano Lopez,Joao Souza,Lopez,Souza,-263,204
+2016-7161,294,20160201,Quito,Clay,2016,Feliciano Lopez,Albert Ramos,Lopez,Ramos,-192,150
+2016-7161,295,20160201,Quito,Clay,2016,Renzo Olivo,Victor Estrella,Olivo,Estrella,140,-175
+2016-7161,298,20160201,Quito,Clay,2016,Albert Ramos,Victor Estrella,Ramos,Estrella,-192,154
+2016-7161,299,20160201,Quito,Clay,2016,Thomaz Bellucci,Paolo Lorenzi,Bellucci,Lorenzi,-179,144
+2016-7434,272,20160201,Sofia,Hard,2016,Jiri Vesely,Damir Dzumhur,Vesely,Dzumhur,-238,184
+2016-7434,276,20160201,Sofia,Hard,2016,Lukas Rosol,Robin Haase,Rosol,Haase,-217,169
+2016-7434,278,20160201,Sofia,Hard,2016,Gilles Muller,Malek Jaziri,Muller,Jaziri,-435,317
+2016-7434,280,20160201,Sofia,Hard,2016,Mirza Basic,Yuki Bhambri,Basic,Bhambri,-222,172
+2016-7434,282,20160201,Sofia,Hard,2016,Adrian Mannarino,Evgeny Donskoy,Mannarino,Donskoy,-152,121
+2016-7434,284,20160201,Sofia,Hard,2016,Marsel Ilhan,Filip Krajinovic,Ilhan,Krajinovic,-141,112
+2016-7434,286,20160201,Sofia,Hard,2016,Viktor Troicki,Daniel Brands,Troicki,Brands,-263,202
+2016-7434,290,20160201,Sofia,Hard,2016,Gilles Muller,Ricardas Berankis,Muller,Berankis,-333,247
+2016-7434,298,20160201,Sofia,Hard,2016,Viktor Troicki,Martin Klizan,Troicki,Klizan,-303,239
+2016-7485,271,20161017,Antwerp,Hard,2016,Illya Marchenko,Kyle Edmund,Marchenko,Edmund,175,-222
+2016-7485,283,20161017,Antwerp,Hard,2016,Benoit Paire,Steve Darcis,Paire,Darcis,-122,-102
+2016-7485,286,20161017,Antwerp,Hard,2016,David Ferrer,Kyle Edmund,Ferrer,Edmund,-213,169
+2016-7485,287,20161017,Antwerp,Hard,2016,Robin Haase,Andreas Seppi,Haase,Seppi,-118,-106
+2016-7485,292,20161017,Antwerp,Hard,2016,Marius Copil,Steve Darcis,Copil,Darcis,131,-167
+2016-7485,293,20161017,Antwerp,Hard,2016,Florian Mayer,David Goffin,Mayer,Goffin,432,-667
+2016-7485,294,20161017,Antwerp,Hard,2016,Kyle Edmund,Andreas Seppi,Edmund,Seppi,-192,150
+2016-7485,297,20161017,Antwerp,Hard,2016,Marius Copil,David Goffin,Copil,Goffin,511,-833
+2016-7485,298,20161017,Antwerp,Hard,2016,Kyle Edmund,Richard Gasquet,Edmund,Gasquet,160,-200
+2016-7581,271,20160926,Chengdu,Hard,2016,Jordan Thompson,Kevin Anderson,Thompson,Anderson,283,-385
+2016-7581,275,20160926,Chengdu,Hard,2016,Hiroki Moriya,Juan Monaco,Moriya,Monaco,198,-256
+2016-7581,277,20160926,Chengdu,Hard,2016,Karen Khachanov,Joao Sousa,Khachanov,Sousa,114,-152
+2016-7581,284,20160926,Chengdu,Hard,2016,Di Wu,Konstantin Kravchuk,Wu,Kravchuk,231,-303
+2016-7581,286,20160926,Chengdu,Hard,2016,Nick Kyrgios,Kevin Anderson,Kyrgios,Anderson,-192,154
+2016-7581,288,20160926,Chengdu,Hard,2016,Feliciano Lopez,Juan Monaco,Lopez,Monaco,-169,137
+2016-7581,289,20160926,Chengdu,Hard,2016,Adrian Mannarino,Karen Khachanov,Mannarino,Khachanov,104,-132
+2016-7581,291,20160926,Chengdu,Hard,2016,Dusan Lajovic,Grigor Dimitrov,Lajovic,Dimitrov,393,-588
+2016-7581,298,20160926,Chengdu,Hard,2016,Viktor Troicki,Karen Khachanov,Troicki,Khachanov,-182,148
+2016-7581,299,20160926,Chengdu,Hard,2016,Grigor Dimitrov,Albert Ramos,Dimitrov,Ramos,-312,245
+2016-M001,271,20160111,Sydney,Hard,2016,Gilles Muller,Borna Coric,Muller,Coric,-164,125
+2016-M001,273,20160111,Sydney,Hard,2016,Mikhail Kukushkin,Jeremy Chardy,Kukushkin,Chardy,110,-137
+2016-M001,275,20160111,Sydney,Hard,2016,Maximilian Marterer,Pablo Cuevas,Marterer,Cuevas,154,-200
+2016-M001,278,20160111,Sydney,Hard,2016,Andreas Seppi,Denis Istomin,Seppi,Istomin,-135,108
+2016-M001,280,20160111,Sydney,Hard,2016,Tommy Robredo,John Millman,Robredo,Millman,110,-137
+2016-M001,282,20160111,Sydney,Hard,2016,Leonardo Mayer,Teymuraz Gabashvili,Mayer,Gabashvili,-238,185
+2016-M001,284,20160111,Sydney,Hard,2016,Martin Klizan,Jordan Thompson,Klizan,Thompson,-161,129
+2016-M001,286,20160111,Sydney,Hard,2016,Dominic Thiem,Gilles Muller,Thiem,Muller,-141,108
+2016-M001,287,20160111,Sydney,Hard,2016,James Duckworth,Jeremy Chardy,Duckworth,Chardy,216,-286
+2016-M001,291,20160111,Sydney,Hard,2016,Tommy Robredo,Viktor Troicki,Robredo,Troicki,114,-147
+2016-M001,293,20160111,Sydney,Hard,2016,Jordan Thompson,Bernard Tomic,Thompson,Tomic,602,-909
+2016-M001,295,20160111,Sydney,Hard,2016,Grigor Dimitrov,Alexandr Dolgopolov,Dimitrov,Dolgopolov,-909,800
+2016-M001,297,20160111,Sydney,Hard,2016,Teymuraz Gabashvili,Bernard Tomic,Gabashvili,Tomic,301,-417
+2016-M009,240,20160509,Rome Masters,Clay,2016,Damir Dzumhur,Jeremy Chardy,Dzumhur,Chardy,-102,-123
+2016-M009,242,20160509,Rome Masters,Clay,2016,David Goffin,Leonardo Mayer,Goffin,Mayer,-323,240
+2016-M009,243,20160509,Rome Masters,Clay,2016,Guido Pella,Jack Sock,Pella,Sock,125,-161
+2016-M009,244,20160509,Rome Masters,Clay,2016,Sam Querrey,Albert Ramos,Querrey,Ramos,160,-200
+2016-M009,248,20160509,Rome Masters,Clay,2016,Juan Monaco,Steve Johnson,Monaco,Johnson,-238,186
+2016-M009,249,20160509,Rome Masters,Clay,2016,Feliciano Lopez,Kevin Anderson,Lopez,Anderson,-222,177
+2016-M009,255,20160509,Rome Masters,Clay,2016,Viktor Troicki,Teymuraz Gabashvili,Troicki,Gabashvili,-185,150
+2016-M009,257,20160509,Rome Masters,Clay,2016,Julien Benneteau,Richard Gasquet,Benneteau,Gasquet,733,-1250
+2016-M009,266,20160509,Rome Masters,Clay,2016,Gael Monfils,Thomaz Bellucci,Monfils,Bellucci,-556,384
+2016-M009,268,20160509,Rome Masters,Clay,2016,Aljaz Bedene,Stephane Robert,Bedene,Robert,-185,144
+2016-M009,270,20160509,Rome Masters,Clay,2016,Andy Murray,Mikhail Kukushkin,Murray,Kukushkin,-2000,899
+2016-M009,272,20160509,Rome Masters,Clay,2016,David Goffin,Jack Sock,Goffin,Sock,-222,170
+2016-M009,273,20160509,Rome Masters,Clay,2016,Albert Ramos,Tomas Berdych,Ramos,Berdych,311,-435
+2016-M009,278,20160509,Rome Masters,Clay,2016,Kei Nishikori,Viktor Troicki,Nishikori,Troicki,-909,536
+2016-M009,281,20160509,Rome Masters,Clay,2016,Alexander Zverev,Roger Federer,Zverev,Federer,263,-357
+2016-M009,282,20160509,Rome Masters,Clay,2016,Rafael Nadal,Philipp Kohlschreiber,Nadal,Kohlschreiber,-714,461
+2016-M009,286,20160509,Rome Masters,Clay,2016,Andy Murray,Jeremy Chardy,Murray,Chardy,-909,574
+2016-M009,287,20160509,Rome Masters,Clay,2016,David Goffin,Tomas Berdych,Goffin,Berdych,152,-189
+2016-M009,288,20160509,Rome Masters,Clay,2016,Stanislas Wawrinka,Juan Monaco,Wawrinka,Monaco,-400,301
+2016-M009,292,20160509,Rome Masters,Clay,2016,Rafael Nadal,Nick Kyrgios,Nadal,Kyrgios,-345,256
+2016-M009,296,20160509,Rome Masters,Clay,2016,Kei Nishikori,Dominic Thiem,Nishikori,Thiem,-233,181
+2016-M009,298,20160509,Rome Masters,Clay,2016,Andy Murray,Lucas Pouille,Murray,Pouille,-1429,758
+2016-M009,299,20160509,Rome Masters,Clay,2016,Kei Nishikori,Novak Djokovic,Nishikori,Djokovic,442,-625
+2016-M015,275,20161003,Beijing,Hard,2016,Malek Jaziri,Guido Pella,Jaziri,Pella,-154,122
+2016-M015,277,20161003,Beijing,Hard,2016,Sam Querrey,Richard Gasquet,Querrey,Gasquet,192,-244
+2016-M015,278,20161003,Beijing,Hard,2016,David Ferrer,Pablo Cuevas,Ferrer,Cuevas,-233,179
+2016-M015,280,20161003,Beijing,Hard,2016,Ze Zhang,Jack Sock,Zhang,Sock,501,-769
+2016-M015,281,20161003,Beijing,Hard,2016,Alexander Zverev,Dominic Thiem,Zverev,Thiem,-105,-127
+2016-M015,286,20161003,Beijing,Hard,2016,Rafael Nadal,Adrian Mannarino,Nadal,Mannarino,-1429,805
+2016-M015,293,20161003,Beijing,Hard,2016,Andrey Kuznetsov,Andy Murray,Kuznetsov,Murray,761,-1429
+2016-M015,294,20161003,Beijing,Hard,2016,Rafael Nadal,Grigor Dimitrov,Nadal,Dimitrov,-333,250
+2016-M015,299,20161003,Beijing,Hard,2016,David Ferrer,Andy Murray,Ferrer,Murray,570,-909
+2016-M015,300,20161003,Beijing,Hard,2016,Grigor Dimitrov,Andy Murray,Dimitrov,Murray,353,-476
+2016-M020,271,20160104,Brisbane,Hard,2016,Mikhail Kukushkin,Denis Istomin,Kukushkin,Istomin,104,-135
+2016-M020,277,20160104,Brisbane,Hard,2016,Thomaz Bellucci,David Goffin,Bellucci,Goffin,260,-345
+2016-M020,278,20160104,Brisbane,Hard,2016,Dominic Thiem,James Duckworth,Thiem,Duckworth,-303,229
+2016-M020,283,20160104,Brisbane,Hard,2016,Steve Johnson,Viktor Troicki,Johnson,Troicki,-145,114
+2016-M020,284,20160104,Brisbane,Hard,2016,Tobias Kamke,Benjamin Mitchell,Kamke,Mitchell,-128,100
+2016-M020,286,20160104,Brisbane,Hard,2016,Kei Nishikori,Mikhail Kukushkin,Nishikori,Kukushkin,-588,411
+2016-M020,287,20160104,Brisbane,Hard,2016,Radek Stepanek,Bernard Tomic,Stepanek,Tomic,238,-312
+2016-M020,290,20160104,Brisbane,Hard,2016,Dominic Thiem,Denis Kudla,Thiem,Kudla,-238,188
+2016-M020,291,20160104,Brisbane,Hard,2016,Hyeon Chung,Marin Cilic,Chung,Cilic,241,-303
+2016-M020,297,20160104,Brisbane,Hard,2016,Grigor Dimitrov,Roger Federer,Dimitrov,Federer,395,-556
+2016-M020,298,20160104,Brisbane,Hard,2016,Bernard Tomic,Milos Raonic,Tomic,Raonic,167,-208
+2016-M020,299,20160104,Brisbane,Hard,2016,Dominic Thiem,Roger Federer,Thiem,Federer,597,-1000
+2016-M020,300,20160104,Brisbane,Hard,2016,Milos Raonic,Roger Federer,Raonic,Federer,303,-400
+2016-M052,270,20160215,Rio de Janeiro,Clay,2016,David Ferrer,Nicolas Jarry,Ferrer,Jarry,-5000,1450
+2016-M052,271,20160215,Rio de Janeiro,Clay,2016,Albert Ramos,Dusan Lajovic,Ramos,Lajovic,-159,129
+2016-M052,277,20160215,Rio de Janeiro,Clay,2016,Aljaz Bedene,Fabio Fognini,Bedene,Fognini,250,-345
+2016-M052,278,20160215,Rio de Janeiro,Clay,2016,Jack Sock,Federico Delbonis,Sock,Delbonis,-137,108
+2016-M052,282,20160215,Rio de Janeiro,Clay,2016,Thomaz Bellucci,Alexandr Dolgopolov,Bellucci,Dolgopolov,-133,104
+2016-M052,290,20160215,Rio de Janeiro,Clay,2016,Federico Delbonis,Paolo Lorenzi,Delbonis,Lorenzi,-189,148
+2016-M052,291,20160215,Rio de Janeiro,Clay,2016,Pablo Cuevas,Thiago Monteiro,Cuevas,Monteiro,-833,548
+2016-M052,293,20160215,Rio de Janeiro,Clay,2016,Nicolas Almagro,Rafael Nadal,Almagro,Nadal,411,-588
+2016-M052,298,20160215,Rio de Janeiro,Clay,2016,Dominic Thiem,Guido Pella,Thiem,Pella,-625,418
+2016-M052,299,20160215,Rio de Janeiro,Clay,2016,Pablo Cuevas,Rafael Nadal,Cuevas,Nadal,398,-556
