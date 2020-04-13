@@ -1,8 +1,8 @@
 ---
-title: "Finding The Break Point"
-author: "Group 3: Charles Manzoni, Shoko Wadano, Camila Baquero, Edward Jerse, Juan D. Alvarez"
-date: "2/27/2020"
-output: word_document
+title: "Predicting the Winner of a Tennis Match"
+author: "Group 6: Amrit Rathi, Charles Manzoni, Jason Rock, Justus Troelsch, Jake Corness"
+date: "4/20/2020"
+output: html
 ---
 # PROBLEM DESCRIPTION
 Our team wanted to determine if we could use machine learning to make predictions about the outcome of tennis matches. Specifically, we wanted to know if we could accurately predict who will win a given match, and devise a betting strategy to profit from these predictions. 
