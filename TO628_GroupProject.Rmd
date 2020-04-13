@@ -11,7 +11,7 @@ Our team wanted to determine if we could use machine learning to make prediction
 ## Data Sources
 We pulled data from two primary sources for this project:
 
-1. The first contains historical information on tennis matchups, from 2012-2016 and can be found on kaggle. This was the primary dataset used in all analysis: https://www.kaggle.com/gmadevs/atp-matches-dataset
+1. The first contains historical information on tennis matchups, from 2012-2016 and can be found on kaggle. This was the primary dataset used in all analysis: https://www.kaggle.com/gmadevs/atp-matches-dataset 
 2. The second contains historical betting odds for certain matches. This data was used as a test sample to analyze various betting strategies applied with out model output. Data can be found at https://www.oddsportal.com/results/#tennis
 
 The data from source 1, however, was on a match-by-match bases, and did not provide many variables that would be available to predict the outcome of that match before the match occurred. Instead, the data contained stats about the match itself, such as who won, how many aces a player had, how many break points a player saved, etc. To create a more useful set to use to predict the outcome of future matches, this original dataset was manipulated in SQL. The manipulations were primarily to calculate various statistics for each player (e.g. win %, average opponent rank, average opponent height, average aces, average break points saved, etc) over given periods of history leading up to each match. The periods selected were:
@@ -242,7 +242,7 @@ conf_table_test
 We can see that the output appears to give good results with accuracies around 68%. 
 
 
-### Prediction Using KNN Model
+### Prediction Using KNN Model - JAKE TO COMPLETE
 
 
 ### Prediction Using Neural Net (ANN) Model - CHARLIE TO COMPLETE
