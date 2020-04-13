@@ -1,8 +1,8 @@
 ---
-title: "Finding The Break Point"
-author: "Group 3: Charles Manzoni, Shoko Wadano, Camila Baquero, Edward Jerse, Juan D. Alvarez"
-date: "2/27/2020"
-output: word_document
+title: "Predicting the Winner of a Tennis Match"
+author: "Group 6: Amrit Rathi, Charles Manzoni, Jason Rock, Justus Troelsch, Jake Corness"
+date: "4/20/2020"
+output: html
 ---
 # PROBLEM DESCRIPTION
 Our team wanted to determine if we could use machine learning to make predictions about the outcome of tennis matches. Specifically, we wanted to know if we could accurately predict who will win a given match, and devise a betting strategy to profit from these predictions. 
@@ -147,12 +147,15 @@ tennis1$matchup_age_diff <- impute(tennis1$matchup_age_diff, mean) #replace null
 #create dummies
 
 tennis2 <- data.frame(model.matrix(~. , data=tennis1)) #removes a few rows with null values
+
+#convert player_won_ind back to factor
+tennis2$player_won_ind <- as.factor(tennis2$player_won_ind)
 dim(tennis1)
 dim(tennis2) #Note some records are lost if there were null values when creating the model matrix
 ```
 ```{R, echo=TRUE, eval=TRUE}
 #Examine the Data
-hist(tennis2$player_won_ind)
+plot(tennis2$player_won_ind)
 ```
 
 We can see that of the matches, we have about 50% of them won by "player" and 50% of them won by "opponent". This makes sense since the "player" and "opponent" were randomized.
@@ -211,33 +214,20 @@ summary(log2)
 ```
 Next, we will attempt a prediction of both the training and the test set, to determine the model's accuracy
 ```{R, echo=TRUE, eval=TRUE}
-result_train <- predict(log2, tennis3_train, type="response")
-result_test <- predict(log2, tennis3_test, type="response")
-plot(result_train)
-plot(result_test)
+logreg_pred_train <- predict(log2, tennis3_train, type="response")
+logreg_pred_test <- predict(log2, tennis3_test, type="response")
 ```
 Next, we will convert the result to orignal factor level: "win" or "loss"
 ```{R, echo=TRUE, eval=TRUE}
-tennis3_train$pred[result_train>0.5] <- "win"
-tennis3_train$pred[result_train<=0.5] <- "loss"
-tennis3_train$pred <- as.factor(tennis3_train$pred)
-tennis3_train$actual <- ifelse(tennis3_train$player_won_ind == 1, "win", "loss")
-tennis3_train$actual <- as.factor(tennis3_train$actual)
-tennis3_train <- cbind(tennis3_train, result_train)
-#Test Set
-tennis3_test$pred[result_test>0.5] <- "win"
-tennis3_test$pred[result_test<=0.5] <- "loss"
-tennis3_test$pred <- as.factor(tennis3_test$pred)
-tennis3_test$actual <- ifelse(tennis3_test$player_won_ind == 1, "win", "loss")
-tennis3_test$actual <- as.factor(tennis3_test$actual)
-tennis3_test <- cbind(tennis3_test, result_test)
+logreg_pred_train <- as.factor(ifelse(logreg_pred_train>0.5, 1,0))
+logreg_pred_test <- as.factor(ifelse(logreg_pred_test>0.5, 1,0))
 ```
 Create a confusion matrix for the training and test subsets
 ```{R, echo=TRUE, eval=TRUE}
-conf_table_train <- confusionMatrix(tennis3_train$pred, tennis3_train$actual, positive="win")
-conf_table_train
-conf_table_test <- confusionMatrix(tennis3_test$pred, tennis3_test$actual, positive="win")
-conf_table_test
+logreg_confmatrix_train <- confusionMatrix(logreg_pred_train, tennis3_train$player_won_ind)
+logreg_confmatrix_train
+logreg_conf_table_test <- confusionMatrix(logreg_pred_test, tennis3_test$player_won_ind)
+logreg_conf_table_test
 ```
 We can see that the output appears to give good results with accuracies around 68%. 
 
@@ -246,6 +236,25 @@ We can see that the output appears to give good results with accuracies around 6
 
 
 ### Prediction Using Neural Net (ANN) Model - CHARLIE TO COMPLETE
+```{r}
+# Neural Net
+library(neuralnet)
+
+# ANN with 1 hidden layer and 
+ann_model <- neuralnet(formula = player_won_ind ~ .,
+                              data = tennis3_train, hidden=3)
+
+
+# visualize the network topology
+plot(ann_model)
+
+#Evaluate model performance
+ann_predictions <- compute(ann_model, pokemon_test_n[1:71])
+ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
+ann_model_confmatrix <- confusionMatrix(ann_predictions, pokemon_test_n$is_legendary)
+ann_model_confmatrix
+```
+
 
 
 ### Prediction Using Support Vector Maching (SVM) Model
