@@ -2,7 +2,7 @@
 title: "Predicting the Winner of a Tennis Match"
 author: "Group 6: Amrit Rathi, Charles Manzoni, Jason Rock, Justus Troelsch, Jake Corness"
 date: "4/20/2020"
-output: html_document
+output: html
 ---
 # PROBLEM DESCRIPTION
 Our team wanted to determine if we could use machine learning to make predictions about the outcome of tennis matches. Specifically, we wanted to know if we could accurately predict who will win a given match, and devise a betting strategy to profit from these predictions. 
@@ -27,7 +27,7 @@ If Federer were playing Nadal, we would look at all 20 of Federers last matches,
 ## Variable Definition Table
 Below are selected columns in the primary dataset, which was dataset #1 (tennis match stats) after the SQL manipulation. Only select columns are shown for the calculated metrics, using only those calculated for the last 20 matches. Note that the exact same columns are also present for the previous 50 matches as well as the previous season:
 
-```{r table1, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
 table <- "
 |Variable Name                                 |Definition                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------|
@@ -130,7 +130,6 @@ library(caret)
 library(MASS)
 library(mgcv)
 library(dplyr)
-library(neuralnet)
 ```
 ```{R, echo=TRUE, eval=TRUE}
 #READ DATA
@@ -259,184 +258,171 @@ tennis3_test_n$player_won_ind <- tennis3_test$player_won_ind
 
 ### Prediction Using Neural Net (ANN) Model - CHARLIE TO COMPLETE
 ```{r, echo=TRUE, eval=FALSE}
-# TRY ANN MODELS WITH VARYING NUMBERS OF NODES AND 1 LAYER (USING NORMALIZED DATASET)
-ann_results <- data.frame('',0,0,0)
-names(ann_results) <- c('dataset','nodes','training acc','testing acc')
+# Neural Net
+library(neuralnet)
 
-for (i in 1:4)
+# try ANN models with varying numbers of nodes and 1 layer
+acc <- 0
+best_nodes <- 0
+
+for (i in 1:20)
 {
-  set.seed(1)
-  ann_model <- neuralnet(formula = player_won_ind ~ ., data = tennis3_train_n, hidden=i, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
-  ann_predictions <- neuralnet::compute(ann_model, tennis3_train_n[1:82])
-  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-  ann_model_confmatrix_train <- confusionMatrix(ann_predictions, tennis3_train_n$player_won_ind)
-  print('training acc')
-  print(ann_model_confmatrix_train$overall['Accuracy'])
-  
+  print(i)
+  ann_model <- neuralnet(formula = player_won_ind ~ .,
+                              data = tennis3_train_n, hidden=i)  
   ann_predictions <- neuralnet::compute(ann_model, tennis3_test_n[1:82])
   ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-  ann_model_confmatrix_test <- confusionMatrix(ann_predictions, tennis3_test_n$player_won_ind)
-  print('testing acc')
-  print(ann_model_confmatrix_test$overall['Accuracy'])
-  current_results <- data.frame('normalized dataset - all variables', i, ann_model_confmatrix_train$overall['Accuracy'], ann_model_confmatrix_test$overall['Accuracy'])
-  names(current_results) <- c('dataset','nodes','training acc','testing acc')
-  ann_results <- rbind(ann_results, current_results)
+  ann_model_confmatrix <- confusionMatrix(ann_predictions, tennis3_test_n$player_won_ind)
+  print(ann_model_confmatrix$overall['Accuracy'])
 }
 
 
-#TRYING WITH ONLY A SUBSET OF COLUMNS SELECTED, BASED ON WHAT WAS INCLUDED AS IMPORTANT IN THE LOGISTIC REGRESSION (USING NORMALIZED DATASET)
-for (i in 1:4)
+# try ANN models with varying numbers of nodes and 2 layers
+layer1_nodes <- 0
+layer2_nodes <- 0
+for (i in 1:2)
 {
-  set.seed(1)
-  ann_model <- neuralnet(formula = player_won_ind ~ matchup_ht_diff+
-matchup_age_diff+
-matchup_rank_diff+
-matchup_avg_rankPoints_lastSeason_diff+
-matchup_avg_opp_rankpoints_lastSeason_diff+
-matchup_avg_bpSaved_allowed_perSet_lastSeason_diff+
-matchup_win_perc_last20_diff+
-matchup_avg_2ndWon_perSet_last20_diff+
-matchup_avg_opp_rankpoints_last20_diff+
-matchup_avg_acePerSet_allowed_last20_diff+
-matchup_avg_bpSaved_perSet_last50_diff+
-matchup_total_matches_last20Surface_diff+
-matchup_avg_acePerSet_last20Surface_diff+
-matchup_avg_2ndWon_perSet_last20Surface_diff+
-matchup_avg_bpSaved_perSet_last20Surface_diff+
-matchup_perc_bpSaved_last20Surface_diff+
-matchup_avg_acePerSet_allowed_last20Surface_diff+
-matchup_avg_bpSaved_allowed_perSet_last20Surface_diff+
-matchup_perc_bpSaved_allowed_last20Surface_diff
-, data = tennis3_train_n, hidden=i, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
-  ann_predictions <- neuralnet::compute(ann_model, tennis3_train_n[1:82])
+  for (j in 1:i)
+  {
+   ann_model <- neuralnet(formula = player_won_ind ~ .,
+                              data = tennis3_train, hidden=c(i,j))  
+  ann_predictions <- neuralnet::compute(ann_model, tennis3_test[1:82])
   ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-  ann_model_confmatrix_train <- confusionMatrix(ann_predictions, tennis3_train_n$player_won_ind)
-  print('training acc')
-  print(ann_model_confmatrix_train$overall['Accuracy'])
-  
-  ann_predictions <- neuralnet::compute(ann_model, tennis3_test_n[1:82])
-  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-  ann_model_confmatrix_test <- confusionMatrix(ann_predictions, tennis3_test_n$player_won_ind)
-  print('testing acc')
-  print(ann_model_confmatrix_test$overall['Accuracy'])
-  current_results <- data.frame('normalized dataset - logreg variables', i, ann_model_confmatrix_train$overall['Accuracy'], ann_model_confmatrix_test$overall['Accuracy'])
-  names(current_results) <- c('dataset','nodes','training acc','testing acc')
-  ann_results <- rbind(ann_results, current_results)
+  ann_model_confmatrix <- confusionMatrix(ann_predictions, tennis3_test$player_won_ind)
+  if (ann_model_confmatrix$overall['Accuracy'] > acc)
+  {
+    acc <- ann_model_confmatrix$overall['Accuracy']
+    layer1_nodes <- i
+    layer2_nodes <- j
+  }
+  }
 }
 
-# TRY CONDENSING THE DATASET INTO PRINCIPAL COMPONENTS< AND RUNNING ANN ON THESE PRINCIPAL COMPONENTS
-# reduce dataset to principal components
-tennis3_pc <- prcomp(tennis3[2:83])
-summary(tennis3_pc) #looks like the first 4 principal components explain most of the variation in this dataset...
-tennis3_pc <- tennis3_pc$x
-tennis3_pc <- as.data.frame(tennis3_pc)
-tennis3_pc$player_won_ind <- tennis3$player_won_ind
+acc
+layer1_nodes
+layer2_nodes
 
-   #create training and test set with PCA dataset
-tennis3_pc$rowid <- rownames(tennis3)
-year_data <-  data.frame(cbind(rowid=rownames(tennis),tennis[5]))
-year_data$year <- sapply(year_data$tourney_date, function(x) substr(x,1,4))
-year_data <- year_data[-2]
-tennis3_pc <- merge(tennis3_pc, year_data, by='rowid') #bring in the year
-tennis3_train_pc <- tennis3_pc[tennis3_pc$year=='2014'|tennis3_pc$year=='2015',]
-tennis3_test_pc <- tennis3_pc[tennis3_pc$year=='2016',]
-
-tennis3_train_pc <- tennis3_train_pc[-85] #remove year
-tennis3_train_pc <- tennis3_train_pc[-1] #remove rowid
-tennis3_test_pc <- tennis3_test_pc[-85] #remove year
-tennis3_test_pc <- tennis3_test_pc[-1] #remove rowid
-
-#RUNN ANN ON THE PCs WITH ONLY THE FIRST 4 PCs
-for (i in 1:3)
-{
-  set.seed(1)
-  ann_model <- neuralnet(formula = player_won_ind ~ PC1+ PC2, data = tennis3_train_pc, hidden=1, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
-  ann_predictions <- neuralnet::compute(ann_model, tennis3_train_pc[1:82])
-  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-  ann_model_confmatrix_train <- confusionMatrix(ann_predictions, tennis3_train_pc$player_won_ind)
-  print('training acc')
-  print(ann_model_confmatrix_train$overall['Accuracy'])
-  
-  ann_predictions <- neuralnet::compute(ann_model, tennis3_test_pc[1:82])
-  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-  ann_model_confmatrix_test <- confusionMatrix(ann_predictions, tennis3_test_pc$player_won_ind)
-  print('testing acc')
-  print(ann_model_confmatrix_test$overall['Accuracy'])
-  current_results <- data.frame('PCA', i, ann_model_confmatrix_train$overall['Accuracy'], ann_model_confmatrix_test$overall['Accuracy'])
-  names(current_results) <- c('dataset','nodes','training acc','testing acc')
-  ann_results <- rbind(ann_results, current_results)
-}
-```
-
-```{r table3, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
-#################################################################
-#Examine the Results - saved in ANN results
-   #Note - table manually inserted so that above code doesn't have to run when knitting markdown (output below is what was saved above in ann_results)
-table <- "
-|dataset                              |	nodes                                |	training acc                         |	testing acc                          |	Time                                 |
-|-------------------------------------|	:------------------------------------:|	:------------------------------------:|	:------------------------------------:|	:------------------------------------:|
-|normalized dataset - all variables   |	1                                    |	0.692517                             |	0.6775912                            |	51 sec                               |
-|normalized dataset - all variables   |	2                                    |	0.706576                             |	0.6448177                            |	12 min                               |
-|normalized dataset - all variables   |	3                                    |	0.7235828                            |	0.649324                             |	51 min                               |
-|normalized dataset - all variables   |	4                                    |	0.7598639                            |	0.6079476                            |	10 hrs                               |
-|normalized dataset - logreg variables|	1                                    |	0.6907029                            |	0.6829168                            |	20 sec                               |
-|normalized dataset - logreg variables|	2                                    |	0.6947846                            |	0.6804588                            |	3.88 min                             |
-|normalized dataset - logreg variables|	3                                    |	0.699093                             |	0.6722655                            |	8 min                                |
-|normalized dataset - logreg variables|	4                                    |	0.6981859                            |	0.6341663                            |	10 min                               |
-|PCA                                  |	1                                    |	0.6219695                            |	0.5941499                            |	1.09 hrs                             |
-"
-cat(table)
-```
-
-```{r, echo=TRUE, eval=TRUE}
-#Choose the ANN model with the highest accuracy
-
-set.seed(1)
-ann_model <- neuralnet(formula = player_won_ind ~ matchup_ht_diff+
-matchup_age_diff+
-matchup_rank_diff+
-matchup_avg_rankPoints_lastSeason_diff+
-matchup_avg_opp_rankpoints_lastSeason_diff+
-matchup_avg_bpSaved_allowed_perSet_lastSeason_diff+
-matchup_win_perc_last20_diff+
-matchup_avg_2ndWon_perSet_last20_diff+
-matchup_avg_opp_rankpoints_last20_diff+
-matchup_avg_acePerSet_allowed_last20_diff+
-matchup_avg_bpSaved_perSet_last50_diff+
-matchup_total_matches_last20Surface_diff+
-matchup_avg_acePerSet_last20Surface_diff+
-matchup_avg_2ndWon_perSet_last20Surface_diff+
-matchup_avg_bpSaved_perSet_last20Surface_diff+
-matchup_perc_bpSaved_last20Surface_diff+
-matchup_avg_acePerSet_allowed_last20Surface_diff+
-matchup_avg_bpSaved_allowed_perSet_last20Surface_diff+
-matchup_perc_bpSaved_allowed_last20Surface_diff
-, data = tennis3_train_n, hidden=1, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
+#choose the number of nodes with the highest accuracy
+ann_model <- neuralnet(formula = player_won_ind ~ .,
+                              data = tennis3_train, hidden=c(3,))
 
 # visualize the network topology
 plot(ann_model)
 
 #Evaluate model performance
-ann_predictions_train <- neuralnet::compute(ann_model, tennis3_train_n[1:82])
-ann_predictions_train <- as.factor(ifelse(ann_predictions_train$net.result[,1]>ann_predictions_train$net.result[,2],0,1))
-ann_model_confmatrix_train <- confusionMatrix(ann_predictions_train, tennis3_train_n$player_won_ind)
-ann_model_confmatrix_train
-
-ann_predictions_test <- neuralnet::compute(ann_model, tennis3_test_n[1:82])
-ann_predictions_test <- as.factor(ifelse(ann_predictions_test$net.result[,1]>ann_predictions_test$net.result[,2],0,1))
-ann_model_confmatrix_test <- confusionMatrix(ann_predictions_test, tennis3_test_n$player_won_ind)
-ann_model_confmatrix_test
+ann_predictions <- neuralnet::compute(ann_model, tennis3_test[1:82])
+ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
+ann_model_confmatrix <- confusionMatrix(ann_predictions, tennis3_test$player_won_ind)
+ann_model_confmatrix
 ```
 
-From the ANN model selection above, it looks like the best model of models tested takes in a limited number of input variables (choose the ones identified as important in the logistic regression feature selection), with only one node in a hidden layer. This model gives an accuracy of around 68%.
+
 
 ### Prediction Using Support Vector Maching (SVM) Model
 
 
 ### Prediction Using Decision Tree Model - AMRIT TO COMPLETE
+```{R, echo=True, eval=TRUE}
+#Below we are brinning in the library (C50) and, again, looking at data with a decision tree lense.
+library(C50)
+str(tennis3)
 
+#Below we create the first decision tree model with all the data from the cleaned up dataset and plot.This step was done to just see how complex the tree will be and get a basic understanding.
+tennismod1 <- C5.0(player_won_ind ~., data = tennis3)
+plot(tennismod1)
+table(tennis$player_won_ind)
+
+#Since already split the data into test and train at the very beginnin, we are now checking the proportion of class variables - meaning are they similar when it comes to percent chance of winning or losing. We can see that both test and train data are very similar with roughly 50% wins and losses.
+prop.table(table(tennis3_train$player_won_ind))
+prop.table(table(tennis3_test$player_won_ind))
+
+#Below we are creating the simplest decision tree using the training data we created in the beginning
+library(C50)
+tennismatch_DTmodel1 <- C5.0(tennis3_train[-83], tennis3_train$player_won_ind)
+
+#Here we looked at the summary of the model to see what decision point seems to be the main factor. We noted that matchup_rank_diff is the first important factor and whether the player's difference in rank was less than or greater than 3. Additionally, we noted there are 28 nodes in this decision tree and on the training data it managed to predict it with an error rate of 31.1%; thus, an accuracy rate of 69.7%.Lasty, we noted the top 2 relative variances of the variables in the model were: 1. matchup_rank_diff and 2. matchup_avg_rankPoints_lastSeason_diff..
+summary(tennismatch_DTmodel1)
+
+#To evaluate the model performance, we created a factor vector of predictions on test data
+dtmodel1_match_pred <- predict(tennismatch_DTmodel1, tennis3_test)
+
+#To get a confusion matrix, to understand this base model, we created a cross tabulation of predicted versus actual classes. From this model we can see, that the test data had a false positive prediction rate of 19.1% and a false negative rate of 14%. What is worse when gambling, in our opinion, is predicting a win when there is actually a loss (a false positive) as the player loses money on bets he placed with confidence.
+library(gmodels)
+CrossTable(tennis3_test$player_won_ind, dtmodel1_match_pred,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('actual win', 'predicted win'))
+
+#Based on the above, we see that there is room to improve our decision tree model. We will make false poistives more costly in our model by creating an error matrix. This is to put more weight on false positive errors and to have the model correct those. 
+dt1_error_cost <- matrix(c(0, 4, 1, 0), nrow = 2)
+dt1_error_cost
+
+#Below we apply the error cost matrix to our decision tree model (calling model now with the error_cost "DTmodel2") and see the results. As we expected are false positives did go down, but at the cost of losing opportunities of winning, as we saw our false negative percentage increase dramatically.
+tennismatch_DTmodel2 <- C5.0(tennis3_train[-83], tennis3_train$player_won_ind,
+                          costs = dt1_error_cost)
+dtmodel2_match_pred <- predict(tennismatch_DTmodel2, tennis3_test)
+CrossTable(tennis3_test$player_won_ind, dtmodel2_match_pred,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('actual win', 'predicted win'))
+
+
+
+#Thus, the team wanted to see what the results would be after boosting the training data with more randomness (50 trials). We can see that there was very little improvement from the original decision tree model with false positive percentages going from 19.1% to 13.4% at the cost of false negatives increasing.
+tennismatch_DTmodel3_boost50 <- C5.0(tennis3_train[-83], tennis3_train$player_won_ind,
+                       trials = 50)
+tennismatch_DTmodel3_boost50
+summary(tennismatch_DTmodel3_boost50)
+
+dtmodel3_boost_pred50 <- predict(tennismatch_DTmodel3_boost50, tennis3_test)
+CrossTable(tennis3_test$player_won_ind, dtmodel3_boost_pred50,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('actual default', 'predicted default'))
+
+# Lastly, the team tried to combine both boosting and cost matrix into a new decision tree model, to see how that results would look. Oddly, combining the two, significantly decreased false negatives but our false positive rate went up to 25.9%.
+tennismatch_DTmodel4 <- C5.0(tennis3_train[-83], tennis3_train$player_won_ind, costs = dt1_error_cost,
+                       trials = 50)
+
+
+tennismatch_DTmodel4
+summary(tennismatch_DTmodel4)
+
+dtmodel4_pred <- predict(tennismatch_DTmodel4, tennis3_test)
+CrossTable(tennis3_test$player_won_ind, dtmodel4_pred,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('actual default', 'predicted default'))
+
+
+```
 
 ### Prediction Using Random Forest Model - AMRIT TO COMPLETE
+```{R, echo=True, eval=TRUE}
+#Bring in library (randomForest)
+library(randomForest)
+
+#Below we built a basic randomforest model to see what the estimated error rate is but to also see how many variables were looked at per tree. As predicted, since we have roughly 83 columns, there are 9 varaibles tried at each tree.
+tennismatch_RFmodel1 <-randomForest(player_won_ind ~ ., data = tennis3_train)
+tennismatch_RFmodel1
+
+#To evaluate the model performance, we created a factor vector of predictions on test data similar to our decision tree model.
+rfmodel1_match_pred <- predict(tennismatch_RFmodel1, tennis3_test)
+
+#To get a confusion matrix, to understand this random forest base model, we created a cross tabulation of predicted versus actual classes like we did with decision trees.
+CrossTable(tennis3_test$player_won_ind, rfmodel1_match_pred,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('actual win', 'predicted win'))
+
+#Based on the above, we see that there is room to improve our decision tree model. We will make false poistives more costly in our model by creating an error matrix. This is to put more weight on false positive errors and to have the model correct those. 
+rf1_error_cost <- matrix(c(0, 4, 1, 0), nrow = 2)
+rf1_error_cost
+
+#Below we apply the error cost matrix to our decision tree model (calling model now with the error_cost "RFmodel2") and see the results. From the results, it did not seem like error cost matrix did anything in terms of changing these results.
+tennismatch_RFmodel2 <- randomForest(player_won_ind ~ ., data = tennis3_train,
+                          costs = rf1_error_cost)
+rfmodel2_match_pred <- predict(tennismatch_RFmodel2, tennis3_test)
+CrossTable(tennis3_test$player_won_ind, rfmodel2_match_pred,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('actual win', 'predicted win'))
+
+```
 
 
 ### Prediction Using Ensemble Model
@@ -446,13 +432,12 @@ From the ANN model selection above, it looks like the best model of models teste
 
 ## Analyzing Betting Strategies  (CHARLIE TO CLEAN UP AFTER SECTIONS ABOVE COMPLETE)
 From here, we will bring in the historical odds for a random sample of matches in 2016, and test various betting strategies to determing if this model can be profitable
-```{R, echo=TRUE, eval=FALSE}
+```{R, echo=TRUE, eval=TRUE}
 #bring in odds data to evaluate
 odds <- read.csv('22_MatchData_OddsData.csv')
 odds$match_key <- paste(odds$tourney_id, odds$match_num,sep='||')
-
 #create output df with only relevant columns
-predictions <- data.frame(cbind(rowid = rownames(tennis3_test),tennis3_test[81:84]))
+predictions <- data.frame(cbind(rowid = rownames(tennis_logreg_test),tennis_logreg_test[81:84]))
 orig_key_data <- data.frame(cbind(rowid=rownames(tennis),tennis[1:2]))
 predictions <- merge(orig_key_data, predictions, by="rowid")
 predictions$match_key <- paste(predictions$tourney_id,predictions$match_num,sep='||')
@@ -460,7 +445,7 @@ predictions$match_key <- paste(predictions$tourney_id,predictions$match_num,sep=
 predictions <- merge(predictions, odds, by='match_key')
 ```
 Strategy 1: Calculate payoff if you were to bet $100 on each match, betting on the player predicted to win:
-```{R, echo=TRUE, eval=FALSE}
+```{R, echo=TRUE, eval=TRUE}
 #Calculate the payoffs for $100 bets on the 'player' and 'opponent' if the bets were to win
 predictions$betplayer_payoff <- sapply(predictions$player_odds, function(x) if (x>0) {x} else {-100*100/x})
 predictions$betopp_payoff <- sapply(predictions$opp_odds, function(x) if (x>0) {x} else {-100*100/x})
@@ -487,7 +472,7 @@ paste('Total Bet: ',toString(100*nrow(predictions)))
 paste('Total Gains: ',toString(sum(predictions$bet_all_payoff)))
 ```
 Strategy 2: Bet only on matches we are confident in (using 75% win probability cutoff)
-```{R, echo=TRUE, eval=FALSE}
+```{R, echo=TRUE, eval=TRUE}
 bet_confidence_payoff <- function(cutoff, player_winprob, prediction, actual, player_payoff, opp_payoff)
 {
   if (player_winprob<cutoff & player_winprob > 1-cutoff)
@@ -528,7 +513,7 @@ paste('Total Bet: ',toString(100*sum(predictions$bet_confidence_count)))
 paste('Total Gains: ',toString(sum(predictions$bet_confidence_payoff)))
 ```
 Strategy 3: Bet only on matches with positive expected value, based on p(win) and payoff
-```{R, echo=TRUE, eval=FALSE}
+```{R, echo=TRUE, eval=TRUE}
 bet_expected_payoff <- function(player_winprob, actual, player_payoff, opp_payoff)
 {
   if ((player_winprob*player_payoff)+(1-player_winprob)*(-100)<0 & (player_winprob*(-100))+(1-player_winprob)*opp_payoff<0)
@@ -569,7 +554,7 @@ paste('Total Bet: ',toString(100*sum(predictions$bet_expected_count)))
 paste('Total Gains: ',toString(sum(predictions$bet_expected_payoff)))
 ```
 Strategy 4: Bet only on matches with positive expected value, and with a probability above a certain confidence.  Note this was devised because there were a number of matches in strategy 3 that we were bettiing on because there was a very low probability of winning, but a very high payoff. These did not seem like good bets
-```{R, echo=TRUE, eval=FALSE}
+```{R, echo=TRUE, eval=TRUE}
 bet_expected_conf_payoff <- function(player_winprob, cutoff, actual, player_payoff, opp_payoff)
 {
   if (((player_winprob*player_payoff)+(1-player_winprob)*(-100)<0 & (player_winprob*(-100))+(1-player_winprob)*opp_payoff<0))
@@ -615,7 +600,7 @@ paste('Total Bet: ',toString(100*sum(predictions$bet_expected_conf_count)))
 paste('Total Gains: ',toString(sum(predictions$bet_expected_conf_payoff)))
 ```
 As we can see, strategy 4 appears to give the best returns. To understand the strategy better, we will look at the cash position over time:
-```{R, echo=TRUE, eval=FALSE}
+```{R, echo=TRUE, eval=TRUE}
 predictions$tourney_date <- sapply(predictions$tourney_date, function(x) toString(x))
 predictions$date <- as.Date(predictions$tourney_date, format='%Y%m%d')
 predictions <- predictions[order(predictions$date),]
