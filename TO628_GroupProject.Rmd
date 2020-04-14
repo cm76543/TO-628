@@ -884,75 +884,195 @@ normalize <- function(x)
   }
 }
 
-# apply normalization to training and test sets
-tennis3_train_n <- as.data.frame(lapply(tennis3_train[-83], normalize))
-tennis3_train_n$player_won_ind <- tennis3_train$player_won_ind
-tennis3_test_n <- as.data.frame(lapply(tennis3_test[-83], normalize))
-tennis3_test_n$player_won_ind <- tennis3_test$player_won_ind
+
+# apply normalization and create training and test sets
+tennis3_n <- as.data.frame(lapply(tennis3[2:83], normalize))
+tennis3_n$rowid <- tennis3$rowid
+tennis3_n$year <- tennis3$year
+tennis3_n$player_won_ind <- tennis3$player_won_ind
+tennis3_train_n <- tennis3_n[tennis3_n$year=='2014'|tennis3_n$year=='2015',]
+tennis3_test_n <- tennis3_n[tennis3_n$year=='2016',]
+
+tennis3_train_n <- tennis3_train_n[-84] #remove year
+tennis3_train_n <- tennis3_train_n[-83] #remove rowid
+tennis3_test_n <- tennis3_test_n[-84] #remove year
+tennis3_test_n <- tennis3_test_n[-83] #remove rowid
 ```
 
 
 
 ### Prediction Using Neural Net (ANN) Model - CHARLIE TO COMPLETE
 ```{r, echo=TRUE, eval=FALSE}
-# Neural Net
-library(neuralnet)
+# TRY ANN MODELS WITH VARYING NUMBERS OF NODES AND 1 LAYER (USING NORMALIZED DATASET)
+ann_results <- data.frame('',0,0,0)
+names(ann_results) <- c('dataset','nodes','training acc','testing acc')
 
-# try ANN models with varying numbers of nodes and 1 layer
-acc <- 0
-best_nodes <- 0
-
-for (i in 1:20)
+for (i in 1:4)
 {
-  print(i)
-  ann_model <- neuralnet(formula = player_won_ind ~ .,
-                              data = tennis3_train_n, hidden=i)  
+  set.seed(1)
+  ann_model <- neuralnet(formula = player_won_ind ~ ., data = tennis3_train_n, hidden=i, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
+  ann_predictions <- neuralnet::compute(ann_model, tennis3_train_n[1:82])
+  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
+  ann_model_confmatrix_train <- confusionMatrix(ann_predictions, tennis3_train_n$player_won_ind)
+  print('training acc')
+  print(ann_model_confmatrix_train$overall['Accuracy'])
+  
   ann_predictions <- neuralnet::compute(ann_model, tennis3_test_n[1:82])
   ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-  ann_model_confmatrix <- confusionMatrix(ann_predictions, tennis3_test_n$player_won_ind)
-  print(ann_model_confmatrix$overall['Accuracy'])
+  ann_model_confmatrix_test <- confusionMatrix(ann_predictions, tennis3_test_n$player_won_ind)
+  print('testing acc')
+  print(ann_model_confmatrix_test$overall['Accuracy'])
+  current_results <- data.frame('normalized dataset - all variables', i, ann_model_confmatrix_train$overall['Accuracy'], ann_model_confmatrix_test$overall['Accuracy'])
+  names(current_results) <- c('dataset','nodes','training acc','testing acc')
+  ann_results <- rbind(ann_results, current_results)
 }
 
 
-# try ANN models with varying numbers of nodes and 2 layers
-layer1_nodes <- 0
-layer2_nodes <- 0
-for (i in 1:2)
+#TRYING WITH ONLY A SUBSET OF COLUMNS SELECTED, BASED ON WHAT WAS INCLUDED AS IMPORTANT IN THE LOGISTIC REGRESSION (USING NORMALIZED DATASET)
+for (i in 1:4)
 {
-  for (j in 1:i)
-  {
-   ann_model <- neuralnet(formula = player_won_ind ~ .,
-                              data = tennis3_train, hidden=c(i,j))  
-  ann_predictions <- neuralnet::compute(ann_model, tennis3_test[1:82])
+  set.seed(1)
+  ann_model <- neuralnet(formula = player_won_ind ~ matchup_ht_diff+
+matchup_age_diff+
+matchup_rank_diff+
+matchup_avg_rankPoints_lastSeason_diff+
+matchup_avg_opp_rankpoints_lastSeason_diff+
+matchup_avg_bpSaved_allowed_perSet_lastSeason_diff+
+matchup_win_perc_last20_diff+
+matchup_avg_2ndWon_perSet_last20_diff+
+matchup_avg_opp_rankpoints_last20_diff+
+matchup_avg_acePerSet_allowed_last20_diff+
+matchup_avg_bpSaved_perSet_last50_diff+
+matchup_total_matches_last20Surface_diff+
+matchup_avg_acePerSet_last20Surface_diff+
+matchup_avg_2ndWon_perSet_last20Surface_diff+
+matchup_avg_bpSaved_perSet_last20Surface_diff+
+matchup_perc_bpSaved_last20Surface_diff+
+matchup_avg_acePerSet_allowed_last20Surface_diff+
+matchup_avg_bpSaved_allowed_perSet_last20Surface_diff+
+matchup_perc_bpSaved_allowed_last20Surface_diff
+, data = tennis3_train_n, hidden=i, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
+  ann_predictions <- neuralnet::compute(ann_model, tennis3_train_n[1:82])
   ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-  ann_model_confmatrix <- confusionMatrix(ann_predictions, tennis3_test$player_won_ind)
-  if (ann_model_confmatrix$overall['Accuracy'] > acc)
-  {
-    acc <- ann_model_confmatrix$overall['Accuracy']
-    layer1_nodes <- i
-    layer2_nodes <- j
-  }
-  }
+  ann_model_confmatrix_train <- confusionMatrix(ann_predictions, tennis3_train_n$player_won_ind)
+  print('training acc')
+  print(ann_model_confmatrix_train$overall['Accuracy'])
+  
+  ann_predictions <- neuralnet::compute(ann_model, tennis3_test_n[1:82])
+  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
+  ann_model_confmatrix_test <- confusionMatrix(ann_predictions, tennis3_test_n$player_won_ind)
+  print('testing acc')
+  print(ann_model_confmatrix_test$overall['Accuracy'])
+  current_results <- data.frame('normalized dataset - logreg variables', i, ann_model_confmatrix_train$overall['Accuracy'], ann_model_confmatrix_test$overall['Accuracy'])
+  names(current_results) <- c('dataset','nodes','training acc','testing acc')
+  ann_results <- rbind(ann_results, current_results)
 }
 
-acc
-layer1_nodes
-layer2_nodes
+# TRY CONDENSING THE DATASET INTO PRINCIPAL COMPONENTS AND RUNNING ANN ON THESE PRINCIPAL COMPONENTS
+# reduce dataset to principal components
+tennis3_pc <- prcomp(tennis3[2:83])
+summary(tennis3_pc) #looks like the first 4 principal components explain most of the variation in this dataset...
+tennis3_pc <- tennis3_pc$x
+tennis3_pc <- as.data.frame(tennis3_pc)
+tennis3_pc$player_won_ind <- tennis3$player_won_ind
 
-#choose the number of nodes with the highest accuracy
-ann_model <- neuralnet(formula = player_won_ind ~ .,
-                              data = tennis3_train, hidden=c(3,))
+   #create training and test set with PCA dataset
+tennis3_pc$rowid <- rownames(tennis3)
+year_data <-  data.frame(cbind(rowid=rownames(tennis),tennis[5]))
+year_data$year <- sapply(year_data$tourney_date, function(x) substr(x,1,4))
+year_data <- year_data[-2]
+tennis3_pc <- merge(tennis3_pc, year_data, by='rowid') #bring in the year
+tennis3_train_pc <- tennis3_pc[tennis3_pc$year=='2014'|tennis3_pc$year=='2015',]
+tennis3_test_pc <- tennis3_pc[tennis3_pc$year=='2016',]
+
+tennis3_train_pc <- tennis3_train_pc[-85] #remove year
+tennis3_train_pc <- tennis3_train_pc[-1] #remove rowid
+tennis3_test_pc <- tennis3_test_pc[-85] #remove year
+tennis3_test_pc <- tennis3_test_pc[-1] #remove rowid
+
+#RUNN ANN ON THE PCs WITH ONLY THE FIRST 4 PCs
+for (i in 1:3)
+{
+  set.seed(1)
+  ann_model <- neuralnet(formula = player_won_ind ~ PC1+ PC2, data = tennis3_train_pc, hidden=1, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
+  ann_predictions <- neuralnet::compute(ann_model, tennis3_train_pc[1:82])
+  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
+  ann_model_confmatrix_train <- confusionMatrix(ann_predictions, tennis3_train_pc$player_won_ind)
+  print('training acc')
+  print(ann_model_confmatrix_train$overall['Accuracy'])
+  
+  ann_predictions <- neuralnet::compute(ann_model, tennis3_test_pc[1:82])
+  ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
+  ann_model_confmatrix_test <- confusionMatrix(ann_predictions, tennis3_test_pc$player_won_ind)
+  print('testing acc')
+  print(ann_model_confmatrix_test$overall['Accuracy'])
+  current_results <- data.frame('PCA', i, ann_model_confmatrix_train$overall['Accuracy'], ann_model_confmatrix_test$overall['Accuracy'])
+  names(current_results) <- c('dataset','nodes','training acc','testing acc')
+  ann_results <- rbind(ann_results, current_results)
+}
+```
+
+```{r table3, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+#################################################################
+#Examine the Results - saved in ANN results
+   #Note - table manually inserted so that above code doesn't have to run when knitting markdown (output below is what was saved above in ann_results)
+table <- "
+|dataset                              |	nodes                                |	training acc                         |	testing acc                          |	Time                                 |
+|-------------------------------------|	:------------------------------------:|	:------------------------------------:|	:------------------------------------:|	:------------------------------------:|
+|normalized dataset - all variables   |	1                                    |	0.692064                             |	0.6685785                            |	1 min                                |
+|normalized dataset - all variables   |	2                                    |	0.717687                             |	0.6526014                            |	8 min                                |
+|normalized dataset - all variables   |	3                                    |	0.7235828                            |	0.649324                             |	51 min                               |
+|normalized dataset - all variables   |	4                                    |	0.7598639                            |	0.6079476                            |	10 hrs                               |
+|normalized dataset - logreg variables|	1                                    |	0.6907029                            |	0.6800492                            |	30 sec                               |
+|normalized dataset - logreg variables|	2                                    |	0.6907029                            |	0.6837362                            |	5.5 min                              |
+|normalized dataset - logreg variables|	3                                    |	0.697506                            |	0.6763621                            |	8 min                                 |
+|normalized dataset - logreg variables|	4                                    |	0.6979592                            |	0.6636624                            |	10 min                               |
+|PCA                                  |	1                                    |	0.6219695                            |	0.5941499                            |	1.09 hrs                             |
+"
+cat(table)
+```
+
+```{r, echo=TRUE, eval=TRUE}
+#Choose the ANN model with the highest accuracy
+
+set.seed(1)
+ann_model <- neuralnet(formula = player_won_ind ~ matchup_ht_diff+
+matchup_age_diff+
+matchup_rank_diff+
+matchup_avg_rankPoints_lastSeason_diff+
+matchup_avg_opp_rankpoints_lastSeason_diff+
+matchup_avg_bpSaved_allowed_perSet_lastSeason_diff+
+matchup_win_perc_last20_diff+
+matchup_avg_2ndWon_perSet_last20_diff+
+matchup_avg_opp_rankpoints_last20_diff+
+matchup_avg_acePerSet_allowed_last20_diff+
+matchup_avg_bpSaved_perSet_last50_diff+
+matchup_total_matches_last20Surface_diff+
+matchup_avg_acePerSet_last20Surface_diff+
+matchup_avg_2ndWon_perSet_last20Surface_diff+
+matchup_avg_bpSaved_perSet_last20Surface_diff+
+matchup_perc_bpSaved_last20Surface_diff+
+matchup_avg_acePerSet_allowed_last20Surface_diff+
+matchup_avg_bpSaved_allowed_perSet_last20Surface_diff+
+matchup_perc_bpSaved_allowed_last20Surface_diff
+, data = tennis3_train_n, hidden=2, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
 
 # visualize the network topology
 plot(ann_model)
 
 #Evaluate model performance
-ann_predictions <- neuralnet::compute(ann_model, tennis3_test[1:82])
-ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
-ann_model_confmatrix <- confusionMatrix(ann_predictions, tennis3_test$player_won_ind)
-ann_model_confmatrix
+ann_predictions_train <- neuralnet::compute(ann_model, tennis3_train_n[1:82])
+ann_predictions_train <- as.factor(ifelse(ann_predictions_train$net.result[,1]>ann_predictions_train$net.result[,2],0,1))
+ann_model_confmatrix_train <- confusionMatrix(ann_predictions_train, tennis3_train_n$player_won_ind)
+ann_model_confmatrix_train
+
+ann_predictions_test <- neuralnet::compute(ann_model, tennis3_test_n[1:82])
+ann_predictions_test <- as.factor(ifelse(ann_predictions_test$net.result[,1]>ann_predictions_test$net.result[,2],0,1))
+ann_model_confmatrix_test <- confusionMatrix(ann_predictions_test, tennis3_test_n$player_won_ind)
+ann_model_confmatrix_test
 ```
 
+From the ANN model selection above, it looks like the best model of models tested takes in a limited number of input variables (choose the ones identified as important in the logistic regression feature selection), with only one node in a hidden layer. This model gives an accuracy of around 68%.
 
 
 ### Prediction Using Support Vector Maching (SVM) Model
