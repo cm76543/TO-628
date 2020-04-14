@@ -248,11 +248,19 @@ normalize <- function(x)
   }
 }
 
-# apply normalization to training and test sets
-tennis3_train_n <- as.data.frame(lapply(tennis3_train[-83], normalize))
-tennis3_train_n$player_won_ind <- tennis3_train$player_won_ind
-tennis3_test_n <- as.data.frame(lapply(tennis3_test[-83], normalize))
-tennis3_test_n$player_won_ind <- tennis3_test$player_won_ind
+
+# apply normalization and create training and test sets
+tennis3_n <- as.data.frame(lapply(tennis3[2:83], normalize))
+tennis3_n$rowid <- tennis3$rowid
+tennis3_n$year <- tennis3$year
+tennis3_n$player_won_ind <- tennis3$player_won_ind
+tennis3_train_n <- tennis3_n[tennis3_n$year=='2014'|tennis3_n$year=='2015',]
+tennis3_test_n <- tennis3_n[tennis3_n$year=='2016',]
+
+tennis3_train_n <- tennis3_train_n[-84] #remove year
+tennis3_train_n <- tennis3_train_n[-83] #remove rowid
+tennis3_test_n <- tennis3_test_n[-84] #remove year
+tennis3_test_n <- tennis3_test_n[-83] #remove rowid
 ```
 
 
@@ -375,14 +383,14 @@ for (i in 1:3)
 table <- "
 |dataset                              |	nodes                                |	training acc                         |	testing acc                          |	Time                                 |
 |-------------------------------------|	:------------------------------------:|	:------------------------------------:|	:------------------------------------:|	:------------------------------------:|
-|normalized dataset - all variables   |	1                                    |	0.692517                             |	0.6775912                            |	51 sec                               |
-|normalized dataset - all variables   |	2                                    |	0.706576                             |	0.6448177                            |	12 min                               |
+|normalized dataset - all variables   |	1                                    |	0.692064                             |	0.6685785                            |	1 min                                |
+|normalized dataset - all variables   |	2                                    |	0.717687                             |	0.6526014                            |	8 min                                |
 |normalized dataset - all variables   |	3                                    |	0.7235828                            |	0.649324                             |	51 min                               |
 |normalized dataset - all variables   |	4                                    |	0.7598639                            |	0.6079476                            |	10 hrs                               |
-|normalized dataset - logreg variables|	1                                    |	0.6907029                            |	0.6829168                            |	20 sec                               |
-|normalized dataset - logreg variables|	2                                    |	0.6947846                            |	0.6804588                            |	3.88 min                             |
-|normalized dataset - logreg variables|	3                                    |	0.699093                             |	0.6722655                            |	8 min                                |
-|normalized dataset - logreg variables|	4                                    |	0.6981859                            |	0.6341663                            |	10 min                               |
+|normalized dataset - logreg variables|	1                                    |	0.6907029                            |	0.6800492                            |	30 sec                               |
+|normalized dataset - logreg variables|	2                                    |	0.6907029                            |	0.6837362                            |	5.5 min                              |
+|normalized dataset - logreg variables|	3                                    |	0.697506                            |	0.6763621                            |	8 min                                 |
+|normalized dataset - logreg variables|	4                                    |	0.6979592                            |	0.6636624                            |	10 min                               |
 |PCA                                  |	1                                    |	0.6219695                            |	0.5941499                            |	1.09 hrs                             |
 "
 cat(table)
@@ -411,7 +419,7 @@ matchup_perc_bpSaved_last20Surface_diff+
 matchup_avg_acePerSet_allowed_last20Surface_diff+
 matchup_avg_bpSaved_allowed_perSet_last20Surface_diff+
 matchup_perc_bpSaved_allowed_last20Surface_diff
-, data = tennis3_train_n, hidden=1, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
+, data = tennis3_train_n, hidden=2, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
 
 # visualize the network topology
 plot(ann_model)
@@ -436,7 +444,7 @@ From the ANN model selection above, it looks like the best model of models teste
 ### Prediction Using Decision Tree Model - AMRIT TO COMPLETE
 
 
-### Prediction Using Random Forest Model
+### Prediction Using Random Forest Model - AMRIT TO COMPLETE
 
 
 ### Prediction Using Ensemble/stacked Model, Evaluating & Comparing the Models - CHARLIE TO COMPLETE
