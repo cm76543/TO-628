@@ -2,7 +2,7 @@
 title: "Predicting the Winner of a Tennis Match"
 author: "Group 6: Amrit Rathi, Charles Manzoni, Jason Rock, Justus Troelsch, Jake Corness"
 date: "4/20/2020"
-output: html
+output: html_document
 ---
 # PROBLEM DESCRIPTION
 Our team wanted to determine if we could use machine learning to make predictions about the outcome of tennis matches. Specifically, we wanted to know if we could accurately predict who will win a given match, and devise a betting strategy to profit from these predictions. 
@@ -27,7 +27,7 @@ If Federer were playing Nadal, we would look at all 20 of Federers last matches,
 ## Variable Definition Table
 Below are selected columns in the primary dataset, which was dataset #1 (tennis match stats) after the SQL manipulation. Only select columns are shown for the calculated metrics, using only those calculated for the last 20 matches. Note that the exact same columns are also present for the previous 50 matches as well as the previous season:
 
-```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+```{r table1, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
 table <- "
 |Variable Name                                 |Definition                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------|
@@ -130,6 +130,7 @@ library(caret)
 library(MASS)
 library(mgcv)
 library(dplyr)
+library(neuralnet)
 ```
 ```{R, echo=TRUE, eval=TRUE}
 #READ DATA
@@ -258,9 +259,6 @@ tennis3_test_n$player_won_ind <- tennis3_test$player_won_ind
 
 ### Prediction Using Neural Net (ANN) Model - CHARLIE TO COMPLETE
 ```{r, echo=TRUE, eval=FALSE}
-# Neural Net
-library(neuralnet)
-
 # TRY ANN MODELS WITH VARYING NUMBERS OF NODES AND 1 LAYER (USING NORMALIZED DATASET)
 ann_results <- data.frame('',0,0,0)
 names(ann_results) <- c('dataset','nodes','training acc','testing acc')
@@ -352,7 +350,7 @@ tennis3_test_pc <- tennis3_test_pc[-1] #remove rowid
 for (i in 1:3)
 {
   set.seed(1)
-  ann_model <- neuralnet(formula = player_won_ind ~ PC1+ PC2+ PC3, data = tennis3_train_pc, hidden=i, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
+  ann_model <- neuralnet(formula = player_won_ind ~ PC1+ PC2, data = tennis3_train_pc, hidden=1, lifesign='full', lifesign.step=10000, threshold=.01, stepmax = 100000000)  
   ann_predictions <- neuralnet::compute(ann_model, tennis3_train_pc[1:82])
   ann_predictions <- as.factor(ifelse(ann_predictions$net.result[,1]>ann_predictions$net.result[,2],0,1))
   ann_model_confmatrix_train <- confusionMatrix(ann_predictions, tennis3_train_pc$player_won_ind)
@@ -370,7 +368,7 @@ for (i in 1:3)
 }
 ```
 
-```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+```{r table3, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
 #################################################################
 #Examine the Results - saved in ANN results
    #Note - table manually inserted so that above code doesn't have to run when knitting markdown (output below is what was saved above in ann_results)
@@ -448,12 +446,13 @@ From the ANN model selection above, it looks like the best model of models teste
 
 ## Analyzing Betting Strategies  (CHARLIE TO CLEAN UP AFTER SECTIONS ABOVE COMPLETE)
 From here, we will bring in the historical odds for a random sample of matches in 2016, and test various betting strategies to determing if this model can be profitable
-```{R, echo=TRUE, eval=TRUE}
+```{R, echo=TRUE, eval=FALSE}
 #bring in odds data to evaluate
 odds <- read.csv('22_MatchData_OddsData.csv')
 odds$match_key <- paste(odds$tourney_id, odds$match_num,sep='||')
+
 #create output df with only relevant columns
-predictions <- data.frame(cbind(rowid = rownames(tennis_logreg_test),tennis_logreg_test[81:84]))
+predictions <- data.frame(cbind(rowid = rownames(tennis3_test),tennis3_test[81:84]))
 orig_key_data <- data.frame(cbind(rowid=rownames(tennis),tennis[1:2]))
 predictions <- merge(orig_key_data, predictions, by="rowid")
 predictions$match_key <- paste(predictions$tourney_id,predictions$match_num,sep='||')
@@ -461,7 +460,7 @@ predictions$match_key <- paste(predictions$tourney_id,predictions$match_num,sep=
 predictions <- merge(predictions, odds, by='match_key')
 ```
 Strategy 1: Calculate payoff if you were to bet $100 on each match, betting on the player predicted to win:
-```{R, echo=TRUE, eval=TRUE}
+```{R, echo=TRUE, eval=FALSE}
 #Calculate the payoffs for $100 bets on the 'player' and 'opponent' if the bets were to win
 predictions$betplayer_payoff <- sapply(predictions$player_odds, function(x) if (x>0) {x} else {-100*100/x})
 predictions$betopp_payoff <- sapply(predictions$opp_odds, function(x) if (x>0) {x} else {-100*100/x})
@@ -488,7 +487,7 @@ paste('Total Bet: ',toString(100*nrow(predictions)))
 paste('Total Gains: ',toString(sum(predictions$bet_all_payoff)))
 ```
 Strategy 2: Bet only on matches we are confident in (using 75% win probability cutoff)
-```{R, echo=TRUE, eval=TRUE}
+```{R, echo=TRUE, eval=FALSE}
 bet_confidence_payoff <- function(cutoff, player_winprob, prediction, actual, player_payoff, opp_payoff)
 {
   if (player_winprob<cutoff & player_winprob > 1-cutoff)
@@ -529,7 +528,7 @@ paste('Total Bet: ',toString(100*sum(predictions$bet_confidence_count)))
 paste('Total Gains: ',toString(sum(predictions$bet_confidence_payoff)))
 ```
 Strategy 3: Bet only on matches with positive expected value, based on p(win) and payoff
-```{R, echo=TRUE, eval=TRUE}
+```{R, echo=TRUE, eval=FALSE}
 bet_expected_payoff <- function(player_winprob, actual, player_payoff, opp_payoff)
 {
   if ((player_winprob*player_payoff)+(1-player_winprob)*(-100)<0 & (player_winprob*(-100))+(1-player_winprob)*opp_payoff<0)
@@ -570,7 +569,7 @@ paste('Total Bet: ',toString(100*sum(predictions$bet_expected_count)))
 paste('Total Gains: ',toString(sum(predictions$bet_expected_payoff)))
 ```
 Strategy 4: Bet only on matches with positive expected value, and with a probability above a certain confidence.  Note this was devised because there were a number of matches in strategy 3 that we were bettiing on because there was a very low probability of winning, but a very high payoff. These did not seem like good bets
-```{R, echo=TRUE, eval=TRUE}
+```{R, echo=TRUE, eval=FALSE}
 bet_expected_conf_payoff <- function(player_winprob, cutoff, actual, player_payoff, opp_payoff)
 {
   if (((player_winprob*player_payoff)+(1-player_winprob)*(-100)<0 & (player_winprob*(-100))+(1-player_winprob)*opp_payoff<0))
@@ -616,7 +615,7 @@ paste('Total Bet: ',toString(100*sum(predictions$bet_expected_conf_count)))
 paste('Total Gains: ',toString(sum(predictions$bet_expected_conf_payoff)))
 ```
 As we can see, strategy 4 appears to give the best returns. To understand the strategy better, we will look at the cash position over time:
-```{R, echo=TRUE, eval=TRUE}
+```{R, echo=TRUE, eval=FALSE}
 predictions$tourney_date <- sapply(predictions$tourney_date, function(x) toString(x))
 predictions$date <- as.Date(predictions$tourney_date, format='%Y%m%d')
 predictions <- predictions[order(predictions$date),]
