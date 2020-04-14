@@ -324,7 +324,7 @@ matchup_perc_bpSaved_allowed_last20Surface_diff
   ann_results <- rbind(ann_results, current_results)
 }
 
-# TRY CONDENSING THE DATASET INTO PRINCIPAL COMPONENTS< AND RUNNING ANN ON THESE PRINCIPAL COMPONENTS
+# TRY CONDENSING THE DATASET INTO PRINCIPAL COMPONENTS AND RUNNING ANN ON THESE PRINCIPAL COMPONENTS
 # reduce dataset to principal components
 tennis3_pc <- prcomp(tennis3[2:83])
 summary(tennis3_pc) #looks like the first 4 principal components explain most of the variation in this dataset...
@@ -439,10 +439,7 @@ From the ANN model selection above, it looks like the best model of models teste
 ### Prediction Using Random Forest Model
 
 
-### Prediction Using Ensemble Model
-
-
-## Evaluating / Comparing the Models - CHARLIE TO COMPLETE
+### Prediction Using Ensemble/stacked Model, Evaluating & Comparing the Models - CHARLIE TO COMPLETE
 
 ## Analyzing Betting Strategies  (CHARLIE TO CLEAN UP AFTER SECTIONS ABOVE COMPLETE)
 From here, we will bring in the historical odds for a random sample of matches in 2016, and test various betting strategies to determing if this model can be profitable
